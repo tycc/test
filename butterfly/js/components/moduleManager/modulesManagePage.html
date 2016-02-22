@@ -1,0 +1,189 @@
+<div id="modulesManagePage" data-view="components/moduleManager/modulesManagePage">
+    <style>
+        .content {
+            padding-top: 48px;
+        }
+        
+        .flex1 {
+            line-height: 46px;
+        }
+        
+        .active {
+            background-color: rgb(230, 230, 230);
+        }
+        
+        .module-list {
+            padding: 15px;
+            border-bottom: 1px #ccc solid;
+        }
+        
+        .hbox {
+            height: 46px;
+            background-color: #EEEEEF !important;
+            -webkit-box-shadow: 0 0 1px white;
+            padding: 0;
+        }
+        
+        .temp-img {
+            width: 45px;
+            height: 45px;
+            vertical-align: top;
+        }
+        
+        .temp-info {
+            padding-left: 15px;
+            width: 80%;
+            display: inline-block;
+            vertical-align: super;
+        }
+        
+        .temp-describe {
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+        
+        .temp-name {
+            padding-bottom: 5px;
+        }
+        
+        .temp-category {
+            text-indent: 10px;
+            height: 20px;
+            width: 100%;
+            background-color: #ccc;
+        }
+        
+        .progress {
+            position: absolute;
+            width: 45px;
+            height: 5px;
+            margin-top: 5px;
+            border: 1px #8997B1 solid;
+            border-radius: 2px;
+            box-shadow: inset 0px 1px 1px 0px rgba(0, 0, 0, 0.2);
+            display: none;
+        }
+        
+        .progressNow {
+            width: 0%;
+            height: 100%;
+            background-color: green;
+            transition: width 1s;
+            -moz-transition: width 1s;
+            /* Firefox 4 */
+            
+            -webkit-transition: width 1s;
+            /* Safari and Chrome */
+            
+            -o-transition: width 1s;
+        }
+        
+        #modules-temp {
+            /* iscroll*/
+            
+            position: absolute;
+            width: 100%;
+            /* Prevent elements to be highlighted on tap */
+            
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+            /* Put the scroller into the HW Compositing layer right from the start */
+            
+            -webkit-transform: translateZ(0);
+            -moz-transform: translateZ(0);
+            -ms-transform: translateZ(0);
+            -o-transform: translateZ(0);
+            transform: translateZ(0);
+        }
+        
+        #modules-wrapper {
+            position: absolute;
+            top: 48px;
+            bottom: 44px;
+            width: 100%;
+            overflow: hidden;
+            /* Prevent native touch events on Windows */
+            
+            -ms-touch-action: none;
+            /* Prevent the callout on tap-hold and text selection */
+            
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            /* Prevent text resize on orientation change, useful for web-apps */
+            
+            -webkit-text-size-adjust: none;
+            -moz-text-size-adjust: none;
+            -ms-text-size-adjust: none;
+            -o-text-size-adjust: none;
+            text-size-adjust: none;
+        }
+        /*	.edit{
+		display: none;
+	}*/
+        
+        .moduleType {
+            position: absolute;
+            height: 20px;
+            right: 20px;
+        }
+        
+        .moduleType span {
+            font-size: 12px;
+            color: rgb(100, 100, 100);
+        }
+    </style>
+
+    <script id="modules-template" type="text/x-underscore-template">
+        <div class="module-list" data-identifier=<%=identifier%>>
+            <div class="moduleType">
+                <% if(type==='install' ){ %>
+                    <span>待安装</span>
+                    <%}else if(type==='update' ){%>
+                        <span>待更新</span>
+                        <%} %>
+            </div>
+            <%if(identifier){var imgsrc='../' + identifier + '/img/icon_'+ identifier + '.ing'}%>
+                <img src=<%=imgsrc%> class="temp-img" onerror="this.src='../butterfly/js/components/moduleManager/img/defaultModule.ing'">
+                <div class="progress">
+                    <div class="progressNow"></div>
+                </div>
+                <div class="temp-info">
+                    <div class="temp-name">
+                        <%=name%>
+                    </div>
+                    <div class="temp-describe">
+                        <%=releaseNote%>
+                    </div>
+                </div>
+        </div>
+    </script>
+    <header class="bar bar-nav blue-bar" style="z-index:99999">
+
+        <button class="btn btn-link btn-nav pull-left goback">
+            <span class="icon icon-left-nav"></span>
+        </button>
+
+        <h1 class="title">模块管理</h1>
+
+        <button class="btn btn-link btn-nav pull-right edit">
+            <span style="font-size: 14px;"></span>
+        </button>
+
+    </header>
+
+    <div class="content">
+        <div id="modules-wrapper">
+            <div id="modules-temp">
+
+            </div>
+        </div>
+        <!-- <div class="bar bar-standard bar-footer hbox" style="text-align:center">
+		<p class="flex1 installed active" ><span>已安装</span></p>
+		<p class="flex1 notInstalled"><span>未安装</span></p>
+		<p class="flex1 update"><span>待更新</span></p>
+	</div> -->
+    </div>
+</div>

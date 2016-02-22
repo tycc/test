@@ -1,0 +1,254 @@
+<div id="welcomeIndex" data-view="welcome/welcomeIndex">
+    <style type="text/css">
+    #welcomeIndex .wrapper {
+        position: absolute;
+        top: 44px;
+        bottom: 51px;
+        left: 0;
+        right: 0;
+        width: auto;
+        overflow: hidden;
+    }
+
+    #welcomeIndex #scroller {
+        position: relative;
+        height: 100%;
+        height: 100%;
+    }
+
+    #welcomeIndex .map {
+        position: absolute;
+        left: 0px;
+        top: 45px;
+        bottom: 52px;
+        right: 0px;
+    }
+
+    #welcomeIndex .ol-collapsed {
+        display: none;
+    }
+
+    #welcomeIndex .step-icon {
+        width: 40px;
+        height: 53px;
+        background: url(../welcome/img/zuobiao.png);
+        background-size: 100% 100%;
+    }
+
+    #welcomeIndex .step-name {
+        text-decoration: none;
+        color: white;
+        font-size: 10pt;
+        font-weight: bold;
+        width: 100px;
+        height: 30px;
+        border-radius: 20px;
+        line-height: 32px;
+        position: absolute;
+        top: 55px;
+        left: -28px;
+        background-color: rgba(255, 255, 255, 0.8);
+        box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.3);
+    }
+
+    #welcomeIndex .step-name>div {
+        background-color: #999999;
+        width: 20px;
+        height: 20px;
+        border-radius: 20px;
+        position: absolute;
+        top: 50%;
+        margin-top: -10px;
+        margin-left: 5px;
+        vertical-align: middle;
+        line-height: 22px;
+        padding-right: 1px;
+        text-align: center;
+    }
+
+    #welcomeIndex .step-name>span {
+        position: absolute;
+        left: 27px;
+        color: #666;
+    }
+
+
+
+    #welcomeIndex #vienna2>span,
+    #welcomeIndex #vienna3>span,
+    #welcomeIndex #vienna4>span,
+    #welcomeIndex #vienna5>span {
+        color: #f68f7e;
+    }
+
+    #welcomeIndex #vienna2>div,
+    #welcomeIndex #vienna3>div,
+    #welcomeIndex #vienna4>div,
+    #welcomeIndex #vienna5>div {
+        background-color: #f25e3a;
+    }
+
+    #welcomeIndex #vienna2 {
+        width: 80px;
+        left: -20px;
+    }
+
+    #welcomeIndex #vienna3 {
+        width: 90px;
+        left: -28px;
+    }
+
+    #welcomeIndex #vienna4 {
+        width: 90px;
+        left: -28px;
+    }
+
+    #welcomeIndex #vienna5 {
+        width: 100px;
+        left: -33px;
+    }
+
+    #welcomeIndex .btn-float {
+        position: absolute;
+        right: 0;
+        width: 60px;
+        height: 30px;
+        z-index: 200;
+        background-color: rgba(0, 0, 0, 0.5);
+        border-bottom-left-radius: 5px;
+        border-top-left-radius: 5px;
+        line-height: 30px;
+        padding-left: 15px;
+        font-size: 13pt;
+    }
+
+
+    #welcomeIndex .activity-icon {
+        width: 120px;
+        height: 70px;
+        background: url(../welcome/img/dialog2.png);
+        background-size: 100% 100%;
+        line-height: 20px;
+        text-align: center;
+        color: rgb(255, 255, 255);
+        font-size: 9pt;
+        padding-top: 8px;
+        position: relative;
+    }
+
+    #welcomeIndex #activity1 {
+
+    }
+    #welcomeIndex #activity2{
+        background: url(../welcome/img/dialog3.png);
+        background-size: 100% 100%;
+    }
+
+    #welcomeIndex #activity3{
+        background: url(../welcome/img/dialog1.png);
+        background-size: 100% 100%;
+    }
+    #welcomeIndex #activity4{
+        background: url(../welcome/img/dialog1.png);
+        background-size: 100% 100%;
+    }
+
+    #welcomeIndex .ac-time{
+        margin-left: -5px;
+    }
+
+    #welcomeIndex #activity {
+        color: #fff;
+        top: 60px;
+    }
+    #welcomeIndex #welcome {
+        color: rgb(25, 241, 203);
+        top: 100px;
+    }
+
+    #welcomeIndex #welcomeStep {
+        display: none
+    }
+    #welcomeIndex #activitys{display: none;}
+    #welcomeIndex .step-done{
+        background-color: #999 !important;
+    }
+    #welcomeIndex .step-done~span{
+        color: #666 !important;
+    }
+    #welcomeIndex .choose{
+        color: rgb(25, 241, 203) !important;
+    }
+    #welcomeIndex .unchoose{
+        color: rgb(255, 255, 255) !important;
+    }
+    </style>
+    <header class="bar bar-nav blue-bar top-bar">
+        <button class="btn btn-link btn-nav pull-left back">
+            <span class="icon icon-nav"></span>
+        </button>
+        <h1 class="title">迎新</h1>
+        <button class="btn btn-link btn-nav pull-right edit" data-value="edit">
+        </button>
+    </header>
+    <div class="content">
+        <div id="activity" class="btn-float unchoose">活动</div>
+        <div id="welcome" class="btn-float choose">迎新</div>
+        <div id="map" class="map"></div>
+        <div id="welcomeStep">
+            <div id="step">
+                <div class="overlay step-name" id="vienna1">
+                    <div>1</div>
+                    <span>新生接待处</span>
+                </div>
+                <div id="marker1" class="step-icon" title="Marker"></div>
+            </div>
+            <div id="step">
+                <div class="overlay step-name" id="vienna2">
+                    <div>2</div>
+                    <span>报到处</span>
+                </div>
+                <div id="marker2" class="step-icon" title="Marker"></div>
+            </div>
+            <div id="step">
+                <div class="overlay step-name" id="vienna3">
+                    <div>3</div>
+                    <span>学生寝室</span>
+                </div>
+                <div id="marker3" class="step-icon" title="Marker"></div>
+            </div>
+            <div id="step">
+                <div class="overlay step-name" id="vienna4">
+                    <div>4</div>
+                    <span>财务处</span>
+                </div>
+                <div id="marker4" class="step-icon" title="Marker"></div>
+            </div>
+            <div id="step">
+                <div class="overlay step-name" id="vienna5">
+                    <div>5</div>
+                    <span>一卡通中心</span>
+                </div>
+                <div id="marker5" class="step-icon" title="Marker"></div>
+            </div>
+        </div>
+        <div id="activitys">
+            <div id="activity1" class="activity-icon" title="Marker">
+                <span>游园会</span><br/>
+                <span class="ac-time">12-26 中午12：00</span>
+            </div>
+            <div id="activity2" class="activity-icon" title="Marker">
+                <span>静湖迎新晚会</span><br/>
+                <span class="ac-time">11-25 8：00</span>
+            </div>
+            <div id="activity3" class="activity-icon" title="Marker">
+                <span>人文讲座</span><br/>
+                <span class="ac-time">12-30 晚7：00</span>
+            </div>
+            <div id="activity4" class="activity-icon" title="Marker">
+                <span>科技讲座</span><br/>
+                <span class="ac-time">12-30 晚7：00</span>
+            </div>
+        </div>
+    </div>
+</div>

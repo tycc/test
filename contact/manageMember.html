@@ -1,0 +1,112 @@
+<div id="manageMember" data-view="contact/manageMember">
+<style type="text/css">
+	#manageMember .content{
+		background-color: #f0f5f6;
+		overflow: hidden;
+	}
+	#manageMember .delete{
+		margin: 0px;
+	}
+
+	#manageMember .memberList li{
+		height: 57px;
+		background-color: #fcfffe;
+		border-top: none;
+		border-bottom: 1px solid #DAE0DE;
+		position: relative;
+		padding: 0 5px;
+	}
+	#manageMember .memberList .letter{
+		height: 25px;
+		line-height: 25px;
+		border-bottom: 0;
+		padding-left: 8px;
+		background-color: #F3F9F7;
+		font-size: 15px;
+		color: #989393;
+	}
+	#manageMember .memberImg{
+		width: 40px;
+		height: 40px;
+		border-radius: 20px;
+		vertical-align: middle;
+	}
+	#manageMember .memberName{
+		line-height: 57px;
+		margin-left: 5px;
+	}
+	#manageMember .deleteMember{
+		background: url('../contact/image/del.png') no-repeat center;
+		background-size: 25px 25px;
+		position: absolute;
+		width: 41px;
+		height: 100%;
+		right: 0;
+		display: none;
+	}
+	#manageMember .container {
+	  background: #fff;
+	  position: static;
+	  width: 100%;
+	  height: 100%;
+	}
+
+</style>
+<script id="groupMember-template" type="text/x-underscore-template">
+    <%
+        var lastli = $(".memberList li:last").find("img").attr("data-state");
+        var typeArr = $(".memberImg[data-state="+lastli+"]");
+        if(letter != lastli){
+        	//当前首字母人数超过1人时，显示人数
+        	if(typeArr.length>1){
+        		var preLetter = $(typeArr[0]).parents("li").prev().find("span");
+        		preLetter.text("("+typeArr.length+"人)");
+        	}
+        	var headLetter = letter;
+        	if(headLetter == "manager"){
+        		headLetter = "群主、管理员";
+        	}
+        	var letterli = "<li class='letter'>"+headLetter+"<span></span></li>";
+        	$(".memberList").append(letterli);
+        }
+    %>
+	<img class="memberImg" data-state="<%=letter%>" src="../contact/image/head.jpg">
+    <span class="memberName" data-id="<%=loginId%>"><%=name%><%=letter%></span>
+    <%
+    	if(letter != "manager"){
+    		%><span  class="deleteMember"></span><%
+    	}
+    %>
+
+
+</script>
+
+<header class="bar bar-nav blue-bar">
+    <button class="btn btn-link btn-nav pull-left back" style="margin-left:-10px;">
+        <span class="icon icon-left-nav"></span>
+    </button>
+    <h1 class="title">管理成员</h1>
+    <button class="btn btn-link btn-nav pull-right delete" data-state="delete">
+        <span>删除</span>
+    </button>
+</header>
+<div class="content">
+	<div class="container">
+		<div id="groupMember-list" class="listview" >
+			<div class="scroller">
+				<div class="pulldown">
+	            	<span class="icon"></span><span class="label"></span>
+	            </div>
+				<ul class="memberList">
+	            </ul>
+		        <div class="message">
+			        <div class="empty">没有数据</div>
+			        <div class="error">数据加载失败</div>
+				</div>
+			</div>
+
+	    </div>
+	</div>
+</div>
+
+</div>

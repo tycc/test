@@ -1,0 +1,260 @@
+<style type="text/css" media="all">
+*{
+	margin:0px;
+	list-style: none;
+}
+.table-view-cell{
+	padding: 0px 0px 0px 0px;
+}
+.bar{
+	height: 0px;
+}
+.table-view{
+	background-image: none;
+}
+.content>.table-view:first-child{
+	margin-top:0px;
+	margin-bottom: 0px;
+}
+#calendar-header{
+	/*margin-left: 9px;*/
+	padding-top: 17px;
+	padding-bottom: 5px;
+	/*margin-right: 15px;*/
+	font-size: 18px;
+	text-align: center;
+	position: relative;
+	background-color: white;
+} 
+.header-month{
+	/*float: left;*/
+	color: #274e96;
+}
+.header-year{
+	/*margin-right: 8px;*/
+	color: #274e96;
+}
+.goBackToToday{
+	position: absolute;
+	top: 50%;
+	margin-top: -6px;
+	right: 15%;
+	/*margin-left: -12px;*/
+/*	color: #fff;*/
+	border: 1px solid #c9c9c9;
+	background-color: #f7f7f7;
+	font-size: 12px;
+	padding: 6px 10px;
+	border-radius: 5px;
+}
+.toggleView {
+	position: absolute;
+	top: 50%;
+	margin-top: -6px;
+	left: 15%;
+	/*margin-left: 12px;*/
+	border: 1px solid #c9c9c9;
+	background-color: #f7f7f7;
+	font-size: 12px;
+	padding: 6px 10px;
+	border-radius: 5px;
+}
+.bar-tab .tab-item{
+	height: 0px;
+	position: relative;
+
+}
+.cal-next-page{
+	height: 40px;
+	margin-top: 2px;
+	line-height: 14px;
+	font-size: 14px;
+	color: #c8cfdb;
+	text-align: center;
+	width: 40px;
+	right: 2px;
+	position: absolute;
+}
+.cal-prev-page{
+	height: 40px;
+	margin-top: 2px;
+	line-height: 14px;
+	font-size: 14px;
+	color: #c8cfdb;
+	text-align: center;
+	width: 40px;
+	left: 2px;
+	position: absolute;
+}
+.cal-icon{
+	display: none;
+	text-align: center;
+	display: inline-block;
+	width: 8px;
+	height: 8px;
+	margin-bottom: 5px;
+	border-radius: 4px;
+	background-color: #fff;
+	/*background-color: #B94326;*/
+}
+#week{
+	/* padding-left: 9px;
+	padding-right: 9px; */
+	/* padding-bottom: 9px; */
+	font-size: 12px;
+	position: relative;
+	bottom: none;
+	box-shadow: none;
+	background-color: #fff;
+	color:#b5bece;
+}
+.cal-day{
+	/* border-bottom: 1px solid #D2D3D7; */
+/* 	padding-left: 9px;
+padding-right: 9px; */
+	font-size: 22px;
+	box-shadow: none;
+	text-align: center;
+	background-color: #fff;
+	color: #bec6d4;
+	margin-top: 9px;
+}
+.cal-info{
+	padding-bottom: 12px;
+}
+.cal-lunar{
+	height: 12px;
+	font-size: 8px;
+}
+.activeDay{
+	padding-bottom: 9px;
+	border-bottom: 3px solid #4ebd58;
+}
+
+/*滑动部分的样式*/
+.swiper {
+	overflow: hidden;
+ 	visibility: hidden; 
+	position: relative;
+}
+.swipe-wrap {
+	/* border-bottom: 1px solid #D2D3D7; */
+	overflow: hidden;
+	position: relative;
+}
+.swipe-wrap > div {
+	float:left;
+	width:100%;
+	position: relative;
+}
+.meeting-point{
+	top: -2px;
+	left: 57%;
+	position: absolute;
+	display: none;
+	border-color: transparent #B94326 transparent transparent;
+	border-style: solid !important;
+	border-width: 0px 5px 5px 5px !important;
+}
+.bar-tab .tab-item.active, .bar-tab .tab-item:active {
+	color: #929292;
+}
+
+.cal-swipe-wrap .bar {
+	position: inherit;
+} 
+.cal-swipe-wrap .bar-tab {
+	bottom: none;
+}
+.cal-today {
+	color: "#929292"
+}
+.cal-other-month {
+	color: gainsboro
+}
+.dateMask {
+	position: absolute;
+	left: 0px;
+	right: 0px;
+	top: 0px;
+	bottom: 0px;
+	display: none;
+	/*background-color: #D2D3D7;*/
+	z-index: 999;
+	opacity: 0.5;
+}
+</style>
+
+<script id="week-template" type="text/x-underscore-template">
+		<div class='cal-day bar bar-tab'>
+			<%
+				for(var i = 1; i <= 7; i++) { 
+					var date = moment(dateOfMonday).add("days", i-1);
+					var dateId = dateIdPrefix + date.format("YYYY-MM-DD");
+					%>
+				    	<div class="tab-item cal-info">
+					      	<div class="meeting-point"></div>
+					      	<div class="cal-content content-day<%=i%>" id="<%=dateId%>">
+					      		<%=date.format("D")%>
+					      	</div>
+				      		<div class="cal-lunar lunar-day<%=i%>"><%=LunarCal.getLunarTextByDate(date._d)%></div>
+				    	</div>
+			    	<%
+			    }
+			%>
+		</div>
+</script>
+
+<ul class="table-view" >
+	<li class="table-view-cell" id="calendar-content">
+		<div id="calendar-header" style="z-index:2">
+			<span class="icon icon-left-nav pull-left cal-prev-page"></span>
+			<span class="icon icon-right-nav pull-right cal-next-page"></span>
+			<span class="toggleView">月视图</span>
+			<span class="header-year">2014年</span><span class="header-month">1月</span>
+			<span class='goBackToToday'>今天</span>
+		</div>	
+		<div id="week" class="bar bar-tab" style="z-index:2">
+			<div class="tab-item">
+				<div class="cal-icon icon1"></div>
+				<div class="cal-header header-day1">星期一</div>
+			</div>
+			<div class="tab-item">
+				<div class="cal-icon icon2"></div>
+				<div class="cal-header header-day2">星期二</div>
+			</div>
+			<div class="tab-item">
+				<div class="cal-icon icon3"></div>
+				<div class="cal-header header-day3">星期三</div>
+			</div>
+			<div class="tab-item">
+				<div class="cal-icon icon4"></div>
+				<div class="cal-header header-day4">星期四</div>
+			</div>
+			<div class="tab-item">
+				<div class="cal-icon icon5"></div>
+				<div class="cal-header header-day5">星期五</div>
+			</div>
+			<div class="tab-item">
+				<div class="cal-icon icon6"></div>
+				<div class="cal-header header-day6">星期六</div>
+			</div>
+			<div class="tab-item">
+				<div class="cal-icon icon7"></div>
+				<div class="cal-header header-day7">星期日</div>
+			</div>
+		</div>
+		<div id="slider-weekview" class="swiper">		<!-- 周视图滑动容器 -->
+			<div class="swipe-wrap"></div>
+		</div>
+
+		<div id="slider-monthview" class="swiper cal-swipe">
+			<div class="swipe-wrap cal-swipe-wrap">
+				
+			</div>
+		</div>
+	</li>
+</ul>
+<!-- <div class="dateMask">
+	
+</div> -->

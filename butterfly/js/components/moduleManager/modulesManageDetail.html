@@ -1,0 +1,123 @@
+<div id="modulesManageDetail" data-view="components/moduleManager/modulesManageDetail">
+<style>
+	.detail{
+		position: relative;
+		min-height: 250px;
+		width: 100%;
+		padding-top: 48px;
+		border-bottom: 1px solid #838883;
+		-webkit-box-shadow: #666 0px 5px 10px;
+		-moz-box-shadow: #666 0px 5px 10px;
+	}
+	.arrow{
+		width: 30px; 
+			height: 30px; 
+			border-left: 15px solid transparent;
+			border-right: 15px solid transparent;
+			border-bottom: 15px solid transparent;
+			position: absolute;
+		top: 270px;
+		left: 30px;
+	}
+	.module-info{
+		padding: 15px;
+	}
+	.temp-img{
+		width: 45px;
+		height: 45px;
+		vertical-align: top;
+	}
+	.temp-info{
+		padding-bottom: 20px;
+		padding-left: 15px;
+		width: 80%;
+		display: inline-block;
+		vertical-align: super;
+	}
+	.moduleInfo{
+		padding-bottom: 15px;
+		font-size: 14px;
+	}
+	.moduleInfo span{
+		font-size: 16px;
+	}
+	.progress{
+		position: absolute;
+		width: 45px;
+		height: 5px;
+		margin-top: 5px;
+		border: 1px #8997B1 solid;
+		border-radius: 2px;
+		box-shadow: inset 0px 1px 1px 0px rgba(0, 0, 0, 0.2);
+		display: none;
+	}
+	.progressNow{
+		width: 0%;
+		height: 100%;
+		background-color: green;
+		transition:width 1s;
+		-moz-transition:width 1s; /* Firefox 4 */
+	 	-webkit-transition:width 1s; /* Safari and Chrome */
+		-o-transition:width 1s;	
+	}
+	/*按钮*/
+	.buttFunction{
+		position: absolute;
+		width: 51px;
+		height: 25px;
+		border-radius: 3px;
+		line-height: 25px;
+		text-align: center;
+		font-size: 12px;
+		bottom: 20px;
+		right: 35px;
+		color: #fff;
+	}
+	.buttRed{
+		background-color: #C42F3F;
+	}
+	.buttGreen{
+		background-color: #4EBD58;
+	}
+</style>
+
+<script id="detail-template" type="text/x-underscore-template">
+	<%
+		var ident = window.location.hash.slice(1);
+		var buttName;
+		if(ident==='changan/modulesManageDetail?installed'){
+			buttName = '删除';
+		}else if(ident === 'changan/modulesManageDetail?notInstalled'){
+			buttName = '安装';
+		}else{
+			buttName = '更新';
+		}
+	%>
+  <!-- <div class="buttFunction"><%=buttName%></div> -->
+
+	 <div class="module-info" data-identifier=<%=identifier%>>
+	 <%if(identifier){var imgsrc='../' + identifier + '/img/icon_'+ identifier + '.ing'}%>
+	 	<img src=<%=imgsrc%> class="temp-img"  onerror="this.src='../butterfly/js/components/moduleManager/img/defaultModule.ing'">
+	 	<div class="progress"><div class="progressNow"></div></div>
+	 	<div class="temp-info" >
+	 		<div class="moduleInfo"><span>模块名称:</span><%=name%></div>
+	 		<div class="moduleInfo"><span>当前版本:</span><%=version%></div>
+	 		<div class="moduleInfo"><span>描述:</span><%=releaseNote%></div>
+
+	 	</div>
+	 </div>
+</script>
+
+
+<div class="content">
+	<header class="bar bar-nav blue-bar">
+	<button class="btn btn-link btn-nav pull-left back goback">
+    <span class="icon icon-left-nav"></span>
+  </button>
+  		<h1 class="title">模块详情</h1>
+	</header>
+	<div class="detail">
+		<!-- <div class="arrow"></div> -->
+	</div>
+</div>
+</div>

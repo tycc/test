@@ -1,0 +1,90 @@
+<div id="studentInfo" data-view="welcome/studentInfo">
+    <style>
+    #studentInfo header{background-color: #30536d}
+    #studentInfo .minetop {
+        background-image: url('../welcome/img/infor_bg.png');
+        background-size: 100% 100%;
+        width: 100%;
+        height: 160px;
+        position: relative;
+    }
+
+    #studentInfo .head {
+        width: 70px;
+        height: 70px;
+        top: 20px;
+        position: relative;
+        left: calc(50% - 35px);
+        background-image: url('../welcome/img/portrait.png');
+        background-size: 100% 100%;
+    }
+
+    #studentInfo .userInfo {
+    width: 100%;
+    height: 70px;
+    margin-top: 30px;
+    text-align: center;
+    line-height: 25px;
+    }
+
+    #studentInfo .userInfo p {
+        color: #fff;
+        font-size: 14px;
+    }
+    #studentInfo .mineContent li{
+		padding: 21px 15px 21px 15px;
+		color: #666;
+    }
+	#studentInfo .minefooter{
+		width: 100%;
+		height: 60px;
+		padding: 10px 20px;
+	}
+	#studentInfo .minefooter div{
+		width: 100%;
+		height: 40px;
+		background-color: #f35d3c;
+		border-radius: 5px;
+		text-align: center;
+		line-height: 40px;
+		color: #fff;
+	}
+     #studentInfo .icon{
+        width: 17px;
+        height: 17px;
+        margin-right: 2px;
+        margin-left: 10px;
+        background: url(../welcome/img/back.png);
+        background-size: 100% 100%;
+    }
+    #studentInfo .table-view{
+        font-size: 14px;
+    }
+    </style>
+    <header class="bar bar-nav blue-bar top-bar">
+        <button class="btn btn-link btn-nav pull-left back">
+            <span class="icon icon-nav"></span>返回
+        </button>
+        <h1 class="title">张三</h1>
+    </header>
+    <div class="content">
+        <div class="minetop">
+            <div class="head"></div>
+            <div class="userInfo">
+                <p>张三</p>
+                <p>计算机科学与技术</p>
+            </div>
+        </div>
+        <div class="mineContent">
+            <ul class="table-view">
+                <li class="table-view-cell">学&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;号:<span class="table-view-cell">1212121212</span></li>
+                <li class="table-view-cell">学&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;院:<span class="table-view-cell">计算机与科学学院</span></li>
+                <li class="table-view-cell">身份证号:<span class="table-view-cell">360729199010122213</span></li>
+                <li class="table-view-cell">录取编号:<span class="table-view-cell">xsd1212</span></li>
+            </ul>
+        </div>
+        <div class="minefooter">
+        	<div>生成二维码</div>
+        </div>
+    </div>
+</div>

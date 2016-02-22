@@ -1,0 +1,85 @@
+<div id="bindPhone" data-view="welcome/bindPhone">
+    <style>
+#bindPhone .bindPhoneContent {
+	width: 100%;
+	height: auto;
+	padding: 0px 10px;
+}
+#bindPhone .bindPhoneContent>div {
+
+	/*background-color: #fff;*/
+	border-radius: 10px;
+	width: 100%;
+	height: 44px;
+}
+#bindPhone .bindPhoneContent input {
+	width: 100%;
+	height: 44px;
+	font-size: 14px;
+    border-radius: 5px;
+}
+#bindPhone .verificationCode input {
+	width: 55%;
+
+}
+#bindPhone .phone {
+	margin-top: 16px;
+	margin-bottom: 10px;
+}
+#bindPhone .verificationCodeBtn {
+	width: 40%;
+	height: 44px;
+	background-color: #ccc;
+	float: right;
+	border-radius: 5px;
+	line-height: 44px;
+	text-align: center;
+	color: #fff;
+}
+#bindPhone .submit{
+	width: 100%;
+	height: 44px;
+	/*background-color: #ccc;*/
+	border-radius: 5px;
+	margin-top: 26px;
+	line-height: 44px;
+	text-align: center;
+	color: #fff;
+}
+#bindPhone .gray{
+	background-color: #ccc;
+}
+#bindPhone .orange{
+	background-color: #f35d3c;
+}
+#bindPhone .icon{
+        width: 17px;
+        height: 17px;
+        margin-right: 2px;
+        margin-left: 10px;
+        background: url(../welcome/img/back.png);
+        background-size: 100% 100%;
+    }
+ #bindPhone .borderOrange{
+ 	border:1px solid rgba(243,93,60,1);
+ }
+    </style>
+    <header class="bar bar-nav blue-bar top-bar">
+        <button class="btn btn-link btn-nav pull-left back">
+            <span class="icon icon-nav"></span>返回
+        </button>
+        <h1 class="title">绑定手机号</h1>
+    </header>
+    <div class="content">
+    	<div class="bindPhoneContent">
+    		<div class="phone">
+    			<input type="text" placeholder="请输入11位手机号码" placeholder-data="请输入11位手机号码" id="phone" class="">
+    		</div>
+    		<div class="verificationCode">
+    			<input type="text" placeholder="请输入验证码"  placeholder-data="请输入验证码" id="verificationCode" class="">
+    			<div class="verificationCodeBtn" id="verificationCodeBtn">获取验证码</div>
+    		</div>
+    		<div class="submit gray">提交</div>
+    	</div>
+    </div>
+</div>

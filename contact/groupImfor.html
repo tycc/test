@@ -1,0 +1,273 @@
+<div id="groupImfor" data-view="contact/groupImfor">
+	<style type="text/css">
+		#groupImfor .main-page{
+			width: 100%;
+			height: auto;
+			position: relative;
+		}
+		#groupImfor .group-title{
+			width: 100%;
+			height: 128px;
+			text-align: center;
+			padding-top: 15px;
+			background: url(../contact/image/head_background.png);
+			background-size: 100% 100%;
+			position: relative;
+		}
+		#groupImfor .head_position{
+			width: 62px;
+			height: auto;
+			position: relative;
+			margin: 0 auto
+		}
+		#groupImfor .head_image {
+			width: 62px;
+			height: 62px;
+			border-radius: 31px;
+		}
+		#groupImfor .icon_modify{
+			position: absolute;
+			width: 25px;
+			height: 25px;
+			z-index: 1;
+			top: 45px;
+			left: 35px
+		}
+		#groupImfor .group_name_number{
+			font-size: 12px;
+			color: #3a85af;
+			/*font-weight: 600;*/
+			line-height: 16px;
+			margin-top: 8px;
+		}
+		#groupImfor .group_member{
+			background-color: #FFFFFF;
+			padding-top: 15px;
+			border-bottom: 1px solid #dddddd;
+		}
+		#groupImfor .group_member_title{
+			width: 94%;
+			height: 15px;
+			margin-left: 3%;
+			/*margin-top: 15px;*/
+		}
+		#groupImfor .title_left{
+			float: left;
+			width: 30%;
+		}
+		#groupImfor .title_right{
+			float: right;
+			width: 70%;
+			text-align: right;
+			color: #999999;
+		}
+		#groupImfor .title_right>img{
+			width: 8px;
+			height: 13px;
+			margin-left: 9px;
+		}
+		#groupImfor .group_head_image{
+			width: 94%;
+			margin-left: 3%;
+			padding-top: 11px;
+			padding-bottom: 11px;
+			overflow: hidden;
+		}
+		#groupImfor .group_head_image>div{
+			width: 20%;
+			float: left;
+		}
+		#groupImfor .group_head_image>div img{
+			width: 82%;
+			border-radius: 100%
+		}
+		#groupImfor .pargram-li{
+			width: 100%;
+			height: 50px;
+			color: #333333;
+			line-height: 50px;
+			padding-left: 3%;
+			background-color: #FFFFFF;
+			border-bottom: 1px solid #dddddd;
+			padding-right: 3%
+		}
+		#groupImfor .modify-name{
+			color: #333333;
+			margin-top: 10px;
+		}
+		#groupImfor .pargram-li>img{
+			width: 10px;
+			height: 16px;
+			float: right;
+			margin-top: 17px;
+		}
+		#groupImfor .swich-equiment{
+			height: 26px;
+			width: 45px;
+			float: right;
+			background-color: #06d894;
+			margin-top: 12px;
+			border-radius:12.5px; 
+		}
+		#groupImfor .swich-equiment-positive{
+			background-color: #c3c3c3;
+		}
+		#groupImfor .swich-equiment-component{
+			height: 20px;
+			width: 20px;
+			background-color: white;
+			border-radius:10px; 
+			margin-top: 3px;
+			margin-left: 4px;
+		}
+		#groupImfor .swich-equiment-component-positive{
+			margin-left: 21px;
+		}
+		#groupImfor .group-description{
+			width: 100%;
+			height: 66px;
+			background-color: #FFFFFF;
+			border-bottom: 1px solid #dddddd;
+		}
+		#groupImfor .des-content{
+			width: 70%;
+			height: 40px;
+			line-height: 40px;
+			margin-left: 3%;
+			float: left;
+		}
+		#groupImfor .des-icon{
+			width: 24%;
+			height: 40px;
+			float: left;
+			text-align: right;
+		}
+		#groupImfor .des-icon>img{
+			width: 10px;
+			height: 16px;
+			margin-top: 12px;
+			/* margin-left: 24%; */
+			margin-bottom: 12px;
+		}
+		#groupImfor .des-imfor{
+			width: 94%;
+			height: 26px;
+			margin-left: 3%;
+			float: left;
+			color: #999999;
+		}
+		#groupImfor .icon-button{
+			width: 94%;
+			height: 40px;
+			background-color: #ef544b;
+			border-radius: 5px;
+			margin: 0 auto;
+			color: #FFFFFF;
+			text-align: center;
+			line-height: 40px;
+			margin-top: 15px;
+			margin-bottom: 10px;
+		}
+		#groupImfor .ceng{
+			width: 100%;
+			height: 100%;
+			position: fixed;
+			z-index: 1001;
+			background: transparent;
+			background-color: rgba(100, 99, 99, 0.55);
+			top: 0px;
+			display: none
+		}
+		#groupImfor .ceng-button{
+			position: absolute;
+			width: 94%;
+			text-align: center;
+			left: 3%;
+			bottom: 10px;
+		}
+		#groupImfor .ceng-button>div{
+			width: 100%;
+			height: 40px;
+			line-height: 40px;
+			background-color: #FFFFFF;
+			color: #333333;
+			border-radius: 5px;
+			margin-top: 5px;
+		}
+		.ceng-img{
+			width: 0px;
+			height: 0px;
+			position: fixed;
+			z-index: 1003;
+			background-color: black;
+			top: 0px;
+		}
+		.ceng-img>img{
+			width: 100%;
+			margin-top: 50%;
+		}
+	</style>
+	<script type="text/x-underscore-template" id="group-number-template">
+		<div class="title_left">群成员</div>
+		<div class="title_right"><span><%=number%>人</span><img src="../contact/image/icon_right.png"></div>
+	</script>
+	<script id="head-template" type="text/x-underscore-template">
+		<div><img src="<%=headImage%>"></div>
+	</script>
+	<header class="bar bar-nav blue-bar">
+	    <button class="btn btn-link btn-nav pull-left back" style="margin-left:-10px;">
+	        <span class="icon icon-left-nav"></span>
+	    </button>
+	    <h1 class="title">群资料</h1>
+	</header>
+	<div class="content">
+		<div class="main-page">
+			<div class="group-title">
+				<div class="head_position">
+					<img class="head_image" src="../contact/image/head_image.jpg">
+					<img class="icon_modify" src="../contact/image/modify_icon.png">
+				</div>			
+				<div class="group_name_number">
+					<span>工作交流群</span></br>
+					<span>98765432</span>
+				</div>	
+			</div>
+			<div class="group_member">
+				<div class="group_member_title">
+							
+				</div>
+				<div class="group_head_image">
+					
+				</div>
+			</div>
+			<div class="pargram-li manageGroup">管理群<img src="../contact/image/icon_right.png"></div>
+			<div class="pargram-li modify-name" data-value="modifyName">修改群名称<img src="../contact/image/icon_right.png"></div>
+			<div class="pargram-li">聊天记录<img src="../contact/image/icon_right.png"></div>
+			<div class="pargram-li">最近文件<img src="../contact/image/icon_right.png"></div>
+			<div class="pargram-li"><span>屏蔽群消息</span>
+				<div class = "swich-equiment">
+					<div class = "swich-equiment-component"></div>
+				</div>
+			</div>
+			<div class="group-description" data-value="modifyDescribe">
+				<div class="des-content">群描述</div>
+				<div class="des-icon"><img src="../contact/image/icon_right.png"></div>
+				<div class="des-imfor">点击填写群介绍，让大家更了解你的群</div>
+			</div>
+			<div class="icon-button">解散并退出该群</div>
+		</div>
+		
+
+		<div class="ceng">
+			<div class="ceng-button">
+				<div class="modify-head-img">更换头像</div>
+				<div style="color:#df3634">取消</div>
+			</div>		
+		</div>
+
+		<div class="ceng-img">
+			<img src="../contact/image/head_image.jpg">
+		</div>
+	</div>
+
+</div>

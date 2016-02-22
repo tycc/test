@@ -1,0 +1,131 @@
+#appIndex .content {
+    padding-bottom: 45px;
+}
+
+#appIndex .thumb {
+        max-width: 100%;
+    }
+   #appIndex  #slider {
+        position: relative;
+        margin: 0 auto;
+    }
+   #appIndex  .swipe,.swipe-wrap {
+        overflow: hidden;
+        position: relative;
+    }
+   #appIndex  .swipe {
+        visibility: hidden;
+    }
+    #appIndex .swipe-wrap {
+        text-align: center;
+    }
+    
+    #appIndex .swipe-wrap>div {
+        float: left;
+        /*width: 100%;*/
+        position: relative;
+    }
+    
+    #appIndex #position{
+        text-align: center;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        position: absolute;
+        bottom: 10px;
+        width: 100%;
+    }
+    
+    #appIndex #position li{
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        border-radius: 10px;
+        background: #e1e1e1;
+        margin: 0 2px;
+    }
+    
+    #appIndex #position li.on{
+        background-color: #19f1cb;
+    }
+#appIndex .dynamic{
+    margin: 8px 0;
+    padding-bottom: 5px;
+}
+#appIndex .dytit,#appIndex .dycon,#appIndex .dypart{
+    padding:10px 8px;
+}
+#appIndex .dycon{
+    border-bottom: solid #ccc 1px;
+}
+#appIndex .dytit,#appIndex .part{
+
+    background: #fff;
+}
+#appIndex .part{
+    margin-top: 3px;
+}
+#appIndex .dytit>span{
+    font-size: 14px;
+    color: #333;
+    padding:0 5px 2px 5px;
+    border-left: solid #019966 3px;
+}
+#appIndex .dytit>a{
+    color: #666;
+    font-size: 13px;
+    line-height: 20px;
+    float: right;
+}
+#appIndex .headpic>img{
+    border-radius: 10px;
+    width:50px;
+}
+#appIndex .nameandtime{
+    display: inline-block;
+    position: absolute;
+    left: 65px;
+
+}
+#appIndex .nameandtime>div{
+    line-height: 25px;
+}
+
+#appIndex .nameandtime>div.name{
+    color: #333;
+    font-size: 15px;
+}
+#appIndex .nameandtime>div.time{
+    color: #666;
+    font-size: 12px;
+}
+#appIndex .name>img{
+    margin-left: 5px;
+    width: 14px;
+}
+#appIndex .releasecon{
+    padding-top: 10px;
+}
+#appIndex .textcon{
+    color: #333;
+    line-height: 20px;
+    font-size: 13px;
+    padding-bottom: 5px;
+}
+#appIndex .releasecon>img{
+    width: 100%;
+}
+#appIndex .dypart>div{
+    font-size: 13px;
+    color: #666;
+    display: inline-block;
+    width: 49%;
+    text-align: center;
+}
+#appIndex .dypart>div>img{
+    width: 12px;
+    margin-right: 8px;
+}
+#appIndex .dypart>a{
+    border-left: solid #ccc 1px;
+}

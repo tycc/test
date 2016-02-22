@@ -1,0 +1,113 @@
+<div id="createGroup" data-view="contact/createGroup">
+<style type="text/css">
+	#createGroup .create{
+		margin: 0px;
+	}
+	#createGroup .headPortrait{
+		width: 100%;
+		background: url('../contact/image/head_background.png');
+		background-size: 100% 100%;
+		text-align: center;
+		padding-top: 12px;
+		padding-bottom: 15px;
+	}
+	#createGroup .portrait{
+		margin: auto;
+		width: 62px;
+		height: 62px;
+		border-radius: 31px;
+	}
+	#createGroup .portrait>img{
+		width: 100%;
+		height: 100%;
+		border-radius: 50%;
+	}
+	#createGroup .upload{
+		margin-top: 12px;
+		border-color: #1996e6;
+		color: #1996e6;
+		background-color: inherit;
+		padding:8px 15px;
+		border-radius: 5px;
+		font-size: 14px;
+	}
+	#createGroup .group_name,.group_describe{
+		background-color: #FFFFFF;
+		width: 100%;
+		border-bottom: 1px solid #DDDDDD;
+	}
+	#createGroup .groupName{
+		border: 0;
+		margin-top: 5px;
+		margin-bottom: 5px;
+		width: 85%;
+	}
+	#createGroup .nameLength{
+
+		position: absolute;
+		right: 10px;
+		top: 15px;
+		text-align: right;
+		color: #999;
+	}
+	#createGroup .groupDescribe{
+		margin: 0;
+		border: 0;
+		width: 90%;
+		height: 80px;
+		max-height: 150px;
+		resize: none;
+	}
+	#createGroup .describeLength{
+		width: 100%;
+		padding-bottom: 5px;
+		text-align: right;
+		padding-right: 10px;
+		color: #999;
+	}
+	#createGroup .bar{
+		background-color: #30536d;
+	}
+	#createGroup .title{
+		color: #fff;
+	}
+	#createGroup .bar span{
+		color: #fff;
+	}
+	#createGroup .icon{
+        width: 17px;
+        height: 17px;
+        margin-right: 2px;
+        margin-left: 10px;
+        background: url(../welcome/img/back.png);
+        background-size: 100% 100%;
+    }
+</style>
+
+<header class="bar bar-nav blue-bar">
+    <button class="btn btn-link btn-nav pull-left back" style="margin-left:-10px;">
+          <span class="icon icon-nav"></span>
+    </button>
+    <h1 class="title">创建群</h1>
+    <button class="btn btn-link btn-nav pull-right create">
+        <span>创建</span>
+    </button>
+</header>
+<div class="content">
+	<div class="headPortrait">
+		<div class="portrait">
+			<img src="../contact/image/head.jpg">
+		</div>
+		<button class="upload btn">上传头像</button>
+	</div>
+	<div class="group_name">
+		<input class="groupName" type="text" placeholder="填写群名称（至少2个字）">
+		<span class="nameLength"><b style="font-weight:500">0</b>/32</span>
+	</div>
+	<div class="group_describe">
+		<textarea class="groupDescribe" placeholder="请输入群描述，让大家更了解你的群"></textarea>
+		<div class="describeLength"><b style="font-weight:500">0</b>/256</div>
+	</div>
+</div>
+
+</div>

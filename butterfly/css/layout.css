@@ -1,0 +1,56 @@
+.hbox {
+  display: box;
+  box-orient: horizontal;
+}
+.vbox {
+  display: box;
+  box-orient: vertical;
+}
+.flex-1 {
+  box-flex: 1;
+  -ms-flex: 1 0 auto;
+}
+.flex-2 {
+  box-flex: 2;
+  -ms-flex: 2 0 auto;
+}
+.flex-3 {
+  box-flex: 3;
+  -ms-flex: 3 0 auto;
+}
+.flex-4 {
+  box-flex: 4;
+  -ms-flex: 4 0 auto;
+}
+.flex-5 {
+  box-flex: 5;
+  -ms-flex: 5 0 auto;
+}
+.flex-6 {
+  box-flex: 6;
+  -ms-flex: 6 0 auto;
+}
+.flex-7 {
+  box-flex: 7;
+  -ms-flex: 7 0 auto;
+}
+.flex-8 {
+  box-flex: 8;
+  -ms-flex: 8 0 auto;
+}
+.flex-9 {
+  box-flex: 9;
+  -ms-flex: 9 0 auto;
+}
+.flex-10 {
+  box-flex: 10;
+  -ms-flex: 10 0 auto;
+}
+.flex-11 {
+  box-flex: 11;
+  -ms-flex: 11 0 auto;
+}
+.flex-12 {
+  box-flex: 12;
+  -ms-flex: 12 0 auto;
+}

@@ -1,0 +1,204 @@
+<div id="mineIndex" data-view="mine/mineIndex">
+	<style>
+
+    #mineIndex .content{
+    	padding-bottom: 50px;
+        overflow-y:scroll;
+    }
+    #mineIndex .content::-webkit-scrollbar{
+        display: none;
+    }
+    #mineIndex header{
+    	background-color: #30536d;
+    }
+    #mineIndex .icon{
+        width: 17px;
+        height: 17px;
+        margin-right: 2px;
+        margin-left: 10px;
+        background: url(../welcome/img/back.png);
+        background-size: 100% 100%;
+    }
+    #mineIndex  .bg{
+    	background: url(../mine/images/me_bg.png) center no-repeat;
+    	background-size: 100% auto;
+    }
+    #mineIndex .header,#mineIndex .opencon{
+    	padding:15px 10px 0;
+    }
+    #mineIndex .header>img{
+    	width: 60px;
+    	border-radius: 30px;
+    	border: solid #fff 1px;
+    }
+    #mineIndex .nameandschool{
+    	position: absolute;
+    	display: inline-block;
+    	margin-left: 10px;
+    	height: 60px;
+    }
+     #mineIndex .nameandschool>div{
+     	line-height: 30px;
+     	height: 30px;
+     	font-size: 13px;
+     	color:#ddd;
+     }
+     #mineIndex .arrow_right
+     {
+     	display: inline-block;
+     	width: 13px;
+     	height: 60px;
+     	background: url(../mine/images/arrow_right.png) no-repeat center;
+     	background-size: 100% auto;
+     	float: right;
+        display: none;
+     }
+     #mineIndex .opencon{
+     	padding-bottom: 15px;
+     	color: #ddd;
+     	font-size: 14px;
+     }
+     #mineIndex .three>ul{
+     	height: 50px;
+     	overflow: hidden;
+     	background: rgba(0,0,0,0.2);
+     	padding-top: 5px;
+     }
+     #mineIndex .three li{
+     	width: 33%;
+     	float: left;
+     }
+     #mineIndex .three li a,#mineIndex .three li span{
+     	display: block;
+     	text-align: center;
+     	line-height: 20px;
+     	color: #ddd;
+     	font-size: 14px;
+     }
+     #mineIndex .three .line{
+     	height: 30px;
+     	margin: 5px 0;
+     	width: 1px;
+     	background-color: #ddd;
+     }
+     #mineIndex .list,#mineIndex .set{
+     	margin-top: 10px;
+     	background-color: #fff;
+     	padding-left: 10px;
+     }  #mineIndex .list li,#mineIndex .set li{
+     	padding: 10px 0;
+     	height: 50px;
+     	border-bottom: solid #eee 1px;
+     }
+     #mineIndex .list img,#mineIndex .set img{
+     	width: 30px;
+     }
+     #mineIndex .list div,#mineIndex .set div{
+    display: inline-block;
+    position: absolute;
+    line-height: 30px;
+    margin-left: 8px;
+    color: #666;
+    font-size: 14px;
+     }
+     #mineIndex .list .secimg,#mineIndex .set .secimg{
+    width: 10px;
+    position: absolute;
+    right: 15px;
+    height: 20px;
+    margin-top: 5px;
+     }
+     #mineIndex .minefooter{
+		width: 100%;
+		height: 60px;
+		/*margin-top: 10px;*/
+		padding: 10px 20px;
+	}
+	#mineIndex .minefooter div{
+		width: 100%;
+		height: 40px;
+		border-radius: 5px;
+		text-align: center;
+		line-height: 40px;
+		color: #fff;
+	}
+    #mineIndex .login{
+        background-color:#79a888;
+    }
+    #mineIndex .exit{
+       background-color: #f25d3a;
+    }
+    </style>
+	<header class="bar bar-nav blue-bar top-bar">
+
+		<h1 class="title">个人中心</h1>
+		<button class="btn btn-link btn-nav pull-right edit" data-value="edit"></button>
+	</header>
+	<div class="content">
+		<div class="bg">
+			<div class="header">
+				<img src="../mine/images/portrait.png"/>
+				<div class="nameandschool">
+					<div class="name">张三</div>
+					<div class="school">重庆邮电大学</div>
+				</div>
+				<div class="arrow_right"></div>
+			</div>
+			<div class="opencon">Ta很懒，什么都没留下！</div>
+			<div class="three">
+				<ul>
+					<li>
+						<a>0</a>
+						<span>动态</span>
+					</li>
+					<li class="line"></li>
+					<li>
+						<a>0</a>
+						<span>好友</span>
+					</li>
+					<li class="line"></li>
+					<li id="point">
+						<a>66</a>
+						<span>积分</span>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="list">
+			<ul>
+				<li>
+					<img src="../mine/images/course.png"/>
+					<div>我的课程</div>
+					<img class="secimg" src="../mine/images/arrow_right.png"/>
+				</li>
+				<li>
+					<img src="../mine/images/card.png"/>
+					<div>一卡通充值</div>
+					<img class="secimg" src="../mine/images/arrow_right.png"/>
+				</li>
+				<li>
+					<img src="../mine/images/fare.png"/>
+					<div>话费充值</div>
+					<img class="secimg" src="../mine/images/arrow_right.png"/>
+				</li>
+				<li>
+					<img src="../mine/images/market.png"/>
+					<div>校园商城</div>
+					<img class="secimg" src="../mine/images/arrow_right.png"/>
+				</li>
+			</ul>
+		</div>
+		<div class="set">
+			<ul>
+				<li>
+					<img src="../mine/images/set.png"/>
+					<div>设置</div>
+					<img class="secimg" src="../mine/images/arrow_right.png"/>
+				</li>
+			</ul>
+		</div>
+		<div class="minefooter">
+			<div id="exit" class="exit">退出</div>
+		</div>
+	</div>
+</div>

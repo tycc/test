@@ -1,0 +1,178 @@
+<div id="discussionGroup" data-view="contact/discussionGroup">
+	<style type="text/css">
+		#discussionGroup .group-title{
+			width: 100%;
+			height: 128px;
+			text-align: center;
+			padding-top: 15px;
+			background: url(../contact/image/head_background.png);
+			background-size: 100% 100%;
+			position: relative;
+		}
+		#discussionGroup .head_position{
+			width: 62px;
+			height: auto;
+			position: relative;
+			margin: 0 auto
+		}
+		#discussionGroup .head_image {
+			width: 62px;
+			height: 62px;
+			border-radius: 31px;
+		}
+		#discussionGroup .icon_modify{
+			position: absolute;
+			width: 25px;
+			height: 25px;
+			z-index: 1;
+			top: 45px;
+			left: 35px
+		}
+		#discussionGroup .group_name_number{
+			font-size: 12px;
+			color: #3a85af;
+			/*font-weight: 600;*/
+			line-height: 16px;
+			margin-top: 8px;
+		}
+		#discussionGroup .group_member{
+			background-color: #FFFFFF;
+			border-bottom: 1px solid #dddddd;
+		}
+		#discussionGroup .group_member_title{
+			width: 100%;
+			height: 40px;
+			line-height: 40px;
+			padding-left: 3%;
+			padding-right: 3%;
+			border-bottom: 1px solid #dddddd;
+			/*margin-top: 15px;*/
+		}
+		#discussionGroup .title_left{
+			float: left;
+			width: 30%;
+		}
+		#discussionGroup .title_right{
+			float: right;
+			width: 70%;
+			text-align: right;
+			color: #999999;
+		}
+		#discussionGroup .title_right>img{
+			width: 8px;
+			height: 13px;
+			margin-left: 9px;
+		}
+		#discussionGroup .group_head_image{
+			width: 100%;
+			/*padding-top: 11px;*/
+			padding-bottom: 11px;
+			overflow: hidden;
+		}
+		#discussionGroup .group_head_image>div{
+			width: 25%;
+			float: left;
+			text-align: center;
+			margin-top: 10px
+		}
+		#discussionGroup .group_head_image>div img{
+			width: 58px;
+			height: 58px;
+			border-radius: 100%
+		}
+		#discussionGroup .user_name{
+			font-size: 12px !important;
+			margin-top: 5px !important;
+		}
+		#discussionGroup .pargram-li{
+			width: 100%;
+			height: 50px;
+			color: #333333;
+			line-height: 50px;
+			padding-left: 3%;
+			background-color: #FFFFFF;
+			border-bottom: 1px solid #dddddd;
+			padding-right: 3%
+		}
+		#discussionGroup .modify-name{
+			color: #333333;
+			margin-top: 10px;
+		}
+		#discussionGroup .pargram-li>img{
+			width: 10px;
+			height: 16px;
+			float: right;
+			margin-top: 17px;
+		}
+		#discussionGroup .swich-equiment{
+			height: 26px;
+			width: 45px;
+			float: right;
+			background-color: #06d894;
+			margin-top: 12px;
+			border-radius:12.5px;
+		}
+		#discussionGroup .swich-equiment-positive{
+			background-color: #c3c3c3;
+		}
+		#discussionGroup .swich-equiment-component{
+			height: 20px;
+			width: 20px;
+			background-color: white;
+			border-radius:10px;
+			margin-top: 3px;
+			margin-left: 4px;
+		}
+		#discussionGroup .swich-equiment-component-positive{
+			margin-left: 21px;
+		}
+		#discussionGroup .icon-button{
+			width: 94%;
+			height: 40px;
+			background-color: #ef544b;
+			border-radius: 5px;
+			margin: 0 auto;
+			color: #FFFFFF;
+			text-align: center;
+			line-height: 40px;
+			margin-top: 15px;
+			margin-bottom: 10px;
+		}
+	</style>
+	<script type="text/x-underscore-template" id="group-number-template">
+		<%=strName%>
+	</script>
+	<script id="head-template" type="text/x-underscore-template">
+		<div><img src='<%=headImage%>'/><div class='user_name'><%=name%></div></div>
+	</script>
+	<header class="bar bar-nav blue-bar">
+	    <button class="btn btn-link btn-nav pull-left back" style="margin-left:-10px;">
+	        <span class="icon icon-left-nav"></span>
+	    </button>
+	    <h1 class="title">讨论组设置</h1>
+	</header>
+	<div class="content">
+		<div class="group_member">
+			<div class="group_member_title">
+				<div class="title_left">群成员</div>
+				<div class="title_right">
+					<span></span>
+					<img src="../contact/image/icon_right.png" />
+				</div>
+			</div>
+			<div class="group_head_image">
+
+			</div>
+		</div>
+
+		<div class="pargram-li modify-name">聊天记录<img src="../contact/image/icon_right.png"></div>
+		<div class="pargram-li">最近文件<img src="../contact/image/icon_right.png"></div>
+		<div class="pargram-li"><span>新消息通知</span>
+			<div class = "swich-equiment">
+				<div class = "swich-equiment-component"></div>
+			</div>
+		</div>
+
+		<div class="icon-button">退出讨论组</div>
+	</div>
+</div>

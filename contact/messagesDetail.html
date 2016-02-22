@@ -1,0 +1,244 @@
+<div id="messagesDetail"  data-view="contact/messagesDetail">
+<style type="text/css">
+#messagesDetail{background-color: #efeff4}
+#messagesDetail .content{bottom: 41px;}
+#messagesDetail .tab-content{margin-top:44px;width:100%;height:100%;}
+#messagesDetail .bar{position:absolute;}
+#messagesDetail .bar{background-color:#30536d;}
+#messagesDetail .title{
+  color: #fff;
+}
+#messagesDetail .icon {
+    width: 17px;
+    height: 17px;
+    margin-right: 2px;
+    margin-left: 10px;
+    background: url(../welcome/img/back.png);
+    background-size: 100% 100%;}
+#messagesDetail .meSetMsgBox{/*  */
+padding:15px 15px 15px 15px;}
+#messagesDetail .meSetMsgContentBox{/*  */
+height:100%;width:100%;padding-right:65px;text-align:right;}
+#messagesDetail .meSetMsgContentTriangle{/*  */
+width:0;height:0;border-style:solid;border-width:10px;border-color:transparent transparent transparent #a1cee1;right:-20px;top:33px;position:relative;display:inline-block;}
+#messagesDetail .meHeadIoc{width:50px;height:50px;     /*border: 1px solid red;*/border-radius:50px;position:absolute;right:15px;}
+#messagesDetail .meHeadIoc img{width:50px;height:50px;border-radius:50px;}
+#messagesDetail .meSetMsgContentTextBox{/*  */
+width:100%;height:100%;left:1px;position:relative;color:white;}
+#messagesDetail .meSetMsgContenData{/*  */
+position:relative;right:0px;font-size:12px;top:-3px;color:#b5b5b5;    /*left: -12px;*/}
+#messagesDetail .meSetMsgConten{/*  */
+font-size:15px;    /*padding: 15px;*/padding:10px 15px 10px 15px;background-color:#a1cee1;border-radius:10px;letter-spacing:2px;line-height:1.5;display:inline-block;text-align:left;font-family:"SimHei";word-break:break-all;max-width:80%;}
+#messagesDetail .acceptedMsgBox{padding:30px 65px 30px 15px;}
+#messagesDetail .acceptedMsgContentBox{height:100%;width:100%;padding-left:65px;}
+#messagesDetail .acceptedMsgContentTriangle{/* 三角形的图标 */
+width:0;height:0;border-style:solid;border-width:10px;border-color:transparent white transparent transparent;display:inherit;position:relative;left:-20px;top:32px;}
+#messagesDetail .acceptedHeadIoc{width:50px;height:50px;     /*border: 1px solid red;*/border-radius:50px;position:absolute;left:15px;}
+#messagesDetail .acceptedHeadIoc img{width:50px;height:50px;border-radius:50px;}
+#messagesDetail .acceptedMsgContentTextBox{    /*border: 1px solid red;*/
+width:100%;height:100%;position:relative;}
+#messagesDetail .footer{position:absolute;bottom:0px;width:100%;z-index:100;color:#090909;background-color:#ffffff;}
+#messagesDetail .acceptedMsgConten{font-size:15px;    /*padding: 15px;*/padding:10px 15px 10px 15px;background-color:white;border-radius:10px;letter-spacing:2px;line-height:1.5;display:inline-block;font-family:"SimHei";     /*
+       解决全英文全数字自动换黄，但是，限制了宽度
+       width: 100%;
+        word-wrap: break-word;
+        white-space: normal;
+        */    /* 解决英文数字换行，并且没有显示宽度 */
+word-break:break-all;}
+#messagesDetail .acceptedMsgContenData{position:relative;right:0px;font-size:12px;    /*top: 20px;*/color:#b5b5b5;        /*display: inline-block;
+      text-align: center;*/}
+
+  /**
+    *
+    *
+    *footer css
+    *
+    *
+    *
+    */
+  #messagesDetail .footer{border-top:1px solid #999999;margin-bottom:0px;}
+  #messagesDetail .eseIcon{width:100%;}
+  #messagesDetail .eseIcon > table{width:100%;}
+  #messagesDetail .eseIconDiv{    /* padding-top: 23px; */
+  padding-top:30px;padding-bottom:23px;text-align:center;}
+  #messagesDetail .eseIconDiv > div{    /*width: 56px;*/}
+  #messagesDetail .eseIconDiv img{width:56px;}
+  #messagesDetail .module-name{font-size:14px;color:#52595c;text-align:center;margin-top:4px;}
+  #messagesDetail #editor{height:30px;position:absolute;bottom:0;left:0;width:100%;line-height:30px;}
+
+  /****/
+  #messagesDetail .footerLine2{display:none;}
+  #messagesDetail .footerLine1 div{display:inline-block;}
+  #messagesDetail .footerLine1{padding:5px;text-align:center;height:40px;}
+  #messagesDetail .footerBtn{width:30px;float:left;margin-right:5px;}
+  #messagesDetail #messagesInput{float:left;width:50%;height:30px;margin-left:10px;margin-right:5px;}
+  #messagesDetail .sendBtn{width:60px;float:right;height:30px;border:none;background-color:#ffffff;padding: 0;}
+  #messagesDetail .smileIconDiv{    /* padding-top: 23px; */
+  text-align:center;}
+  #messagesDetail .smileIconDiv > div{    /*width: 56px;*/}
+  textarea{resize:none;}
+  #messagesDetail .smileIconDiv img{width:29px;height:20px;padding:0px 5px;}
+  #messagesDetail .eseIconRow{}
+  #messagesDetail .footerLine3{  /*display: none;*/
+
+  /*  padding: 0px 10px 10px 10px;*/}
+  #messagesDetail .swipe-wrap > .wrap{float:left;width:100%;position:relative;text-align:center;}
+  #messagesDetail .swipe{overflow:hidden;visibility:hidden;position:relative;}
+  #messagesDetail .swipe-wrap{overflow:hidden;position:relative;}
+  #messagesDetail .swipe-wrap > div{float:left;width:100%;position:relative;}
+  #messagesDetail .scroller li{height:auto;border:0px;}
+  #messagesDetail .redSigh{width:26px;vertical-align:middle;display: none;}
+</style>
+
+<script id="ChatHistoyDetail-template" type="text/x-underscore-template">
+<%
+  if (messagesgType==="meSetMsg") {
+%>
+  <div class="meSetMsgBox">
+             <div class="meSetMsgContentBox">
+                   <div class="meSetMsgContentTriangle"></div>
+                   <div class="meHeadIoc">
+                      <img src="<%=HeadPortrait%>">
+                   </div>
+                   <div class="meSetMsgContentTextBox">
+                     <span class="meSetMsgConten"><%=MessageContent%></span>
+
+                   </div>
+               </div>
+  </div>
+<%
+}else if(messagesgType==="groupChatMsg"){
+%>
+  <div class="acceptedMsgBox">
+               <div class="acceptedMsgContentBox">
+                   <div class="acceptedMsgContentTriangle"></div>
+                   <div class="acceptedHeadIoc">
+                     <img src="<%=HeadPortrait%>">
+                   </div>
+                  <div class="acceptedMsgContentTextBox">
+                     <span class="acceptedMsgConten"><%=MessageContent%></span>
+                  </div>
+               </div>
+  </div>
+<%
+}else if(messagesgType==="SysMsg"){
+%>
+  <div>SysMsg</div>
+<%
+}
+%>
+</script>
+<script id="meSetMsg-template" type="text/x-underscore-template">
+<li>
+    <div class="meSetMsgBox">
+             <div class="meSetMsgContentBox">
+                   <div class="meSetMsgContentTriangle"></div>
+                   <div class="meHeadIoc">
+                      <img src="../contact/image/head.jpg">
+                   </div>
+                   <div class="meSetMsgContentTextBox">
+                    <%
+                      if(!msgObj.sendOk){
+                    %>
+                        <img class="redSigh" data-id="<%=msgObj.messageId%>" src="../contact/image/sigh_icon.png"></img>
+                    <%
+                      }
+                    %>
+
+                     <span class="meSetMsgConten"><%=inputValue%></span>
+
+                   </div>
+               </div>
+     </div>
+</li>
+</script>
+<script id="acceptedMsg-template" type="text/x-underscore-template">
+<li>
+    <div class="acceptedMsgBox">
+               <div class="acceptedMsgContentBox">
+                   <div class="acceptedMsgContentTriangle"></div>
+                   <div class="acceptedHeadIoc">
+                     <img src="../contact/image/head.jpg">
+                   </div>
+                  <div class="acceptedMsgContentTextBox">
+
+                     <span class="acceptedMsgConten"><%=inputValue%></span>
+                  </div>
+               </div>
+  </div>
+</li>
+</script>
+<header class="bar bar-nav blue-bar">
+    <button class="btn btn-link btn-nav pull-left back" style="width: 60px;margin-left: -10px;">
+        <span class="icon" style = "margin-left: -20px;"></span>
+    </button>
+    <h1 class="title"></h1>
+</header>
+<!-- <div class="content"> -->
+   <div class="content" id="wrapper">
+        <div class="scroller" style="padding-bottom: 88px">
+          <ul class="memberList">
+          </ul>
+
+        </div>
+
+    </div>
+    <div class="footer">
+      <div class="footerLine1">
+           <!-- 表情按钮 -->
+          <img class="footerBtn" id="smile" src="../contact/image/Iocn_Smile.png">
+          <!-- 更多功能按钮 -->
+          <img class="footerBtn" id="more" src="../contact/image/Iocn_More.png">
+          <input id='messagesInput'></input>
+
+          <!-- <div id="messagesInput" style="display:block">123</div> -->
+          <!-- 发送按钮 -->
+           <button class="sendBtn"  >发送</button>
+
+       </div>
+       <div class="footerLine2">
+            <div>
+
+                <div class="eseIcon" id="scroller" >
+
+                    <table>
+                        <tr class='eseIconRow'>
+                           <td>
+                               <div class="eseIconDiv">
+                                    <img src="../contact/image/Iocn_Photo.png">
+                                    <div class="module-name" data-ident="photo">照片</div>
+                               </div>
+                           </td>
+                            <td>
+                               <div class="eseIconDiv">
+                                <img src="../contact/image/Iocn_Video.png">
+                                <div class="module-name" data-ident="video">视频</div>
+                                </div>
+                           </td>
+                            <td>
+                               <div class="eseIconDiv">
+                                <img src="../contact/image/Iocn_file.png">
+                                <div class="module-name" data-ident="file">文件</div>
+                               </div>
+                           </td>
+                           <td>
+                               <div class="eseIconDiv">
+                               <img src="../contact/image/Iocn_email.png">
+                               <div class="module-name" data-ident="email">邮件</div>
+                               </div>
+                           </td>
+                        </tr>
+
+                    </table>
+
+                </div>
+            </div>
+        </div>
+        <div class="footerLine3">
+          <div class="swipe" id="slider">
+            <div class="swipe-wrap" id="swipe"></div>
+          </div>
+        </div>
+    </div>
+</div>
+<!-- </div> -->

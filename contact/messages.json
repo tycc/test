@@ -1,0 +1,9 @@
+{ 
+    "total": 36,
+    "注释":"HeadPortrait:头像图片路径，MessageContent:聊天内容，messagesgType:消息类型",
+    "data": [
+            
+    ]
+    ,
+    "success": true
+}

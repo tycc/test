@@ -1,0 +1,167 @@
+<div id="myPoint" data-view="mine/myPoint">
+    <style>
+    #myPoint .content {
+        background-color: #f0f0f0;
+    }
+
+    #myPoint #point {
+        position: absolute;
+        top: 44px;
+        text-align: center;
+        width: 100%;
+        background-color: #30536d;
+    }
+
+    #myPoint #point h4 {
+        font-size: 40pt;
+        position: relative;
+        top: 50%;
+        margin-top: -40px;
+        color: #f56040;
+    }
+
+    #myPoint #point span {
+        font-size: 13pt;
+        top: 25px;
+        position: relative;
+        color: rgba(255, 255, 255, 0.8);
+    }
+
+    #myPoint #pointType {
+        position: relative;
+        margin-top: 10px;
+        background-color: #fff;
+        width: 100%;
+        height: auto;
+        top: 110px;
+    }
+
+    #myPoint .pay-item {
+        padding: 10px 0 0 10px;
+    }
+
+    #myPoint img {
+        width: 21px;
+        height: 19px;
+        position: relative;
+        margin-top: 5px;
+    }
+
+    #myPoint .right-item {
+        padding-bottom: 10px;
+        vertical-align: top;
+        display: inline-block;
+        padding-left: 10px;
+        border-bottom: 1px solid #ddd;
+        width: 85%;
+        position: relative;
+    }
+
+ 
+        #myPoint #point {
+            height: 150px;
+            line-height: 165px;
+        }
+        #myPoint .right-item {
+            width: 90%;
+        }
+        #myPoint #pointType {
+            top: 150px;
+        }
+    
+
+    #myPoint .pay-item:last-child>.right-item {
+        border-bottom: none;
+    }
+
+    #myPoint .right-item p {
+        color: #696969;
+        font-size: 14px;
+    }
+
+    #myPoint .right-item span {
+        color: #c8c8c8;
+        font-size: 12px;
+    }
+
+    #myPoint .right-item div {
+        height: 35px;
+        font-size: 14px;
+        line-height: 35px;
+    }
+
+    #myPoint .right-item span {
+        position: relative;
+        top: 3px;
+    }
+
+    #myPoint .right-item .qiandao {
+        position: absolute;
+        right: 10px;
+        color: #79a888;
+        top: 5px;
+        font-size: 14px;
+    }
+
+    #myPoint .right-item img {
+        width: 25px;
+        height: 20px;
+        position: absolute;
+        right: 5px;
+        top: 0;
+    }
+
+    #myPoint .top-bar {
+        background-color: #30536d;
+        border: none;
+        height: 45px;
+        box-shadow: none;
+    }
+
+    #myPoint .icon {
+        width: 17px;
+        height: 17px;
+        margin-right: 2px;
+        margin-left: 10px;
+        background: url(../welcome/img/back.png);
+        background-size: 100% 100%;
+    }
+    </style>
+    <header class="bar bar-nav blue-bar top-bar">
+        <button class="btn btn-link btn-nav pull-left back">
+            <span class="icon icon-nav"></span>返回
+        </button>
+        <h1 class="title">我的积分</h1>
+    </header>
+    <div class="content">
+        <div id="point">
+            <h4>66分</h4>
+            <span>当前积分</span>
+        </div>
+        <div id="pointType">
+            <div class="pay-item" type="qiandao">
+                <img src="../mine/images/qiandao.png">
+                <div class="right-item">
+                    <p>已签到1天</p>
+                    <span>获得积分5分</span>
+                    <span class="qiandao">一键签到</span>
+                </div>
+            </div>
+            <div class="pay-item" type="weixin">
+                <img src="../mine/images/choujiang.png">
+                <div class="right-item">
+                    <div>抽奖</div>
+                    <img src="../mine/images/next.svg">
+                </div>
+            </div>
+            <div class="pay-item" type="weixin">
+                <img src="../mine/images/shangcheng.png">
+                <div class="right-item">
+                    <p>商城购物</p>
+                    <span>安全可靠，后顾无忧！</span>
+                    <img src="../mine/images/next.svg">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

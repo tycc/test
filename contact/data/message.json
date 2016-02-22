@@ -1,0 +1,10 @@
+{
+	"success":"true",
+	"data":{
+		"data":[{
+			"messagesgType":"meSetMsg",
+			"HeadPortrait":"img/001.jpg",
+			"MessageContent":"你好啊"
+		}]
+	}
+}

@@ -1,0 +1,49 @@
+﻿body, div, ul, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, p, blockquote, th, td { padding:0;margin:0; }
+ul,li{ list-style: none;list-style-type:none;}
+/*.page {display: none;position: absolute;top: 0;left: 0;bottom: 0;right: 0;width: 100%;height: 100%;overflow: hidden;}*/
+
+#datescroll div{float: left;margin-left: 10%;margin-top: 15px;padding-right: 22px;}
+#datescroll_datetime div{float: left;margin-left: 10%;padding-right: 22px;}
+#yearwrapper{position: absolute;left: 0;top:45px;bottom: 60px;width:80%;}
+#monthwrapper{position: absolute;left: 26%;top:45px;bottom: 60px;width:80%;}
+#daywrapper{position: absolute;left: 50%;top:45px;bottom: 60px;width:80%;}
+#Hourwrapper{position: absolute;left: 0;top:195px;bottom: 68px;width:80%;}
+#Minutewrapper{position: absolute;left: 26%;top:195px;bottom: 68px;width:80%;}
+#Secondwrapper{position: absolute;left: 50%;top:195px;bottom: 68px;width:80%;}
+#Hourwrapper ul li{color: #898989;font-size: 14px;}
+#Minutewrapper ul li{color: #898989;font-size: 14px;}
+#Secondwrapper ul li{color: #898989;font-size: 14px;}
+#yearwrapper ul li{color: #898989;font-size: 14px;}
+#monthwrapper ul li{color: #898989;font-size: 14px;}
+#daywrapper ul li{color: #898989;font-size: 14px;}
+/*#markyear{position:relative; margin-left: 76px;top:-2px;}
+#markmonth{position:relative; margin-left: 40px;top:-2px;}
+#markday{position:relative; margin-left: 42px;top:-2px;}*/
+#markhour{position:relative; margin-left: 62px;top:-2px;}
+#markminut{position:relative; margin-left: 58px;top:-2px;}
+#marksecond{position:relative; margin-left: 68px;top:-2px;}
+#dateheader{width: 100%;height: 50px;background: #79C12F;text-align: center;color: #fff;line-height: 50px;font-size: 20px;}
+#setcancle ul{text-align: center;line-height: 30px; margin:1px auto;font-size: 20px;}
+#setcancle ul li{border-radius:3px;float: left;width: 50%;height: 40px;line-height: 40px;list-style-type: none;font-size:16px; top: 0px;}
+#dateconfirm{position: absolute;right:0px;color:#2986cc; border-left: 1px solid #dededf;}
+#datecancle{position: absolute;left:0px; width: 50%;color:#1f1f1f;}
+#dateshadow{display: none;position: absolute;width: 100%;height: 100%;top:0;left:0;background: #000; filter:alpha(Opacity=50);-moz-opacity:0.5;opacity: 0.5;z-index: 9999;}
+#datePage{font-size: 22px; border-radius: 3px; position:absolute;top:110px;MARGIN-RIGHT: auto;vertical-align:middle;
+MARGIN-LEFT: auto;width: 80%;;height: 240px;background: #FFFFFF;z-index:9999999;box-shadow: 0px 0px 25px #000;-webkit-box-shadow: 0px 0px 25px #000;
+left: 50%;transform: translate(-50%, -50%);-webkit-transform: translate(-50%, -50%);top: 50% !important;}
+#datetitle{width: 100%;height:50px;background: #fff;text-align: left;color: #2986cc;line-height: 50px;font-size: 18px;padding: 0 5%;}
+#datetitle h1{font-weight:normal;line-height: 50px;border-bottom: 1px solid #2986cc;}
+#datemark{font-size: 18px;left:5%;width: 90%;height: 40px;position:absolute;top:100px;border-top: 1px solid #dededf; border-bottom: 1px solid #dededf;}
+.dateMarker{font-size: 12px; color: #2986cc; width: 32%;display: inline-block; padding-left: 30%; line-height: 40px;}
+#markmonth {padding-left: 25%;}
+#markday {padding-left: 20%;}
+#timemark{font-size: 18px;left:5%;width: 90%;height: 20px;position:absolute;top:242px;background:#eee;border:1px solid #eee;}
+#datescroll{width:94%; margin:10px 3%;border-radius: 4px;height: 120px;text-align: center;line-height: 40px;}
+#datescroll_datetime{display: none;background:#F8F8F8;width:94%; margin:10px 3%;margin-top: 10px;border: 1px solid #E0E0E0;border-radius: 4px;height: 120px;text-align: center;line-height: 40px;}
+#yearwrapper ul,#monthwrapper ul,#daywrapper ul{width:40%;}
+#Hourwrapper ul,#Minutewrapper ul,#Secondwrapper ul{width:40%;}
+#dateFooter{width:100%;background: #f5f4f9;height: 40px;line-height: 40px;bottom: 0px;position: absolute; border-top: 1px solid #dededf;}
+.activeDay, .activeYear, .activeMonth {
+	font-size: 16px !important;
+	color: #2986cc !important;
+}

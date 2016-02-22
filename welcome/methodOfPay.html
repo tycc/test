@@ -1,0 +1,48 @@
+<div id="methodOfPay" data-view="welcome/methodOfPay">
+	<style>
+#methodOfPay .content{
+	background: url("../welcome/img/shaomiao.jpg") no-repeat center;
+	background-size: 100% auto;
+	}
+#methodOfPay .icon {
+    width: 17px;
+    height: 17px;
+    margin-right: 2px;
+    margin-left: 10px;
+    background: url(../welcome/img/back.png);
+    background-size: 100% 100%;
+}
+  #methodOfPay header{
+    	background: none;
+    	box-shadow: none;
+    }
+    #methodOfPay .goPay{
+		width: 80%;
+		height: 44px;
+		border:1px solid #fff;
+		border-radius:25px;
+		position: absolute;
+		bottom: 45px;
+		margin-left: 10%;
+		line-height: 42px;
+		text-align: center;
+		color: #fff;
+    }
+  @media screen and (max-width:320px){
+    #methodOfPay .goPay{
+    bottom: 15px;
+    }
+}
+	</style>
+	  <header class="bar bar-nav blue-bar top-bar">
+        <button class="btn btn-link btn-nav pull-left back">
+            <span class="icon icon-nav"></span>返回
+        </button>
+        <h1 class="title">支付方式</h1>
+        <button class="btn btn-link btn-nav pull-right edit" data-value="edit">
+        </button>
+    </header>
+	<div class="content">
+		<div class="goPay">去缴费</div>
+	</div>
+</div>

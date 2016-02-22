@@ -1,0 +1,29 @@
+{
+  "name": "chameleon-h5",
+  "description": "chameleon h5",
+  "version": "2.1.0",
+  "author": {
+    "name": "Yao Ziyang",
+    "email": "yzy5768@gamil.com"
+  },
+  "homepage": "https://git.oschina.net/cqfoss",
+  "repository": {
+    "type": "git",
+    "url": "https://git.oschina.net/cqfoss/chameleon-h5"
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+    "express": "*",
+    "http-proxy": "*",
+    "grunt": "~0.4.1",
+    "grunt-contrib-clean": "~0.5.0",
+    "grunt-contrib-copy": "~0.4.1",
+    "grunt-contrib-uglify": "~0.2.2",
+    "grunt-contrib-jshint": "~0.7.2",
+    "grunt-contrib-requirejs": "~0.4.1",
+    "grunt-contrib-stylus": "~0.7.0",
+    "grunt-bower-task": "~0.3.4",
+    "grunt-contrib-concat": "~0.3.0"
+  }
+}

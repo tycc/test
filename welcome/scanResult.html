@@ -1,0 +1,99 @@
+<div id="scanResult" data-view="welcome/scanResult">
+    <style type="text/css">
+    #scanResult header{
+        background: none;
+        border:none;
+        box-shadow:none;
+    }
+    #scanResult .content {
+        overflow: hidden;
+        position: absolute;
+        bottom: 0;
+        top: 0;
+        background: url(../welcome/img/scan-result-bg.png);
+        background-size: 100% 100%;
+        text-align: center;
+        padding-top: 0 !important;
+        font-family:"KaiTi";
+    }
+
+   /* h4 {
+        font-size: 1.7em;
+        margin-top: 15%;
+        color: #fff;
+    }
+*/
+    #scanResult #stuInfo {
+        display: none;
+        position: absolute;
+        top: 22%;
+        left: 50%;
+        /*transform: translateX(-50%);*/
+        margin-left: -35%;
+        left: 50%;
+        width: 70%;
+        height: 35%;
+        background: url(../welcome/img/stu_infor.png);
+        background-size: 100% 100%;
+    }
+
+    #scanResult #signUp {
+        width: 50%;
+        height: 42px;
+        border: 1px solid #fff;
+        line-height: 42px;
+        border-radius: 10px;
+        position: absolute;
+        color: #fff;
+        font-size: 14pt;
+        left: 50%;
+        margin-left: -25%;
+        bottom: 22%;
+    }
+
+    @media screen and (max-width:320px) and (max-height: 480px) {
+        #scanResult #signUp {
+            width: 50%;
+            margin-left: -25%;
+            height: 40px;
+            line-height: 40px;
+        }
+    }
+
+    @media screen and (max-width:320px) and (min-height: 481px) {
+        #scanResult #stuInfo {
+            top: 22%;
+            line-height: 25px;
+            font-size: 14px;
+        }
+    }
+    #scanResult .icon{
+        width: 17px;
+        height: 17px;
+        margin-right: 2px;
+        margin-left: 10px;
+        background: url(../welcome/img/back.png);
+        background-size: 100% 100%;
+    }
+    </style>
+    <header class="bar bar-nav blue-bar top-bar">
+        <button class="btn btn-link btn-nav pull-left back">
+            <span class="icon icon-nav"></span>返回
+        </button>
+        <h1 class="title">扫描结果</h1>
+        <button class="btn btn-link btn-nav pull-right edit" data-value="edit">
+        </button>
+    </header>
+    <div class="content">
+        <div id="stuInfo">
+            <!-- <p>姓名：张三</p>
+            <p>学校：重庆邮电大学</p>
+            <p>学院：计算机科学与工程学院</p>
+            <p>学号：1110307061</p>
+            <p>班级：计算机科学与技术2班</p>
+            <p>身份证号：50038419921112345</p>
+            <p>录取通知书编号：XN12345</p> -->
+        </div>
+        <div id="signUp">确定报名</div>
+    </div>
+</div>

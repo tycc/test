@@ -1,0 +1,133 @@
+<div id="selectContact" data-view="contact/selectContact">
+<style type="text/css">
+#selectContact .content{
+	background-color: #f1f1f1;
+}
+#selectContact .complete{
+	margin: 0px;
+}
+#selectContact .uncomplete{
+	color: #BAB1B1;
+}
+#selectContact .index_list{
+	height: 40px;
+	width: 100%;
+	line-height: 30px;
+	border-bottom: 1px solid #dadada;
+}
+#selectContact .index_contact{
+	background-color: #fff;
+}
+#selectContact .index_list > div{
+	float: left;
+	height: 100%;
+}
+#selectContact .index_list_icon{
+	width: 31px;
+	background: url(../contact/image/arrow.png) no-repeat center;
+	-webkit-transform:rotate(-90deg);
+	margin-left: 5px;
+	background-size: 15px 8px;
+	margin-right: 5px;
+}
+#selectContact .index_list_title{
+	color: #000;
+	line-height: 39px;
+	font-size: 16px;
+}
+#selectContact .index_list .index_list_acount{
+	float: right;
+	margin-right: 5px;
+	font-size: 12px;
+	color: #999999;
+}
+#selectContact .index_list_info{
+	width: 100%;
+}
+#selectContact .index_list_info ul{
+	width: 100%;
+}
+#selectContact .index_list_info ul li{
+	width: 100%;
+	height: 48px;
+	border-bottom: 1px solid #dadada;
+	background-color: #fff;
+}
+#selectContact .contact_ul .contactImg{
+	width: 34px;
+	height: 34px;
+	border-radius: 17px;
+	vertical-align: middle;
+	/*margin-left: 10px;*/
+}
+#selectContact .contact_ul .contactName{
+	margin-left: 5px;
+	line-height: 47px;
+}
+/*选择的3中状态  unselect  selecting  selected*/
+#selectContact .checkBox_select{
+  background: url("../contact/image/uncheck.jpg") no-repeat;
+  background-size: 22px;
+  height: 25px;
+  width: 25px;
+  margin-left: 10px;
+  display: inline-block;
+  vertical-align: middle;
+  background-position-y:2px;
+}
+#selectContact .selected{
+  background: url("../contact/image/checked.jpg") no-repeat;
+  background-size: 22px;
+}
+#selectContact .selecting{
+  background: url("../contact/image/check.jpg") no-repeat;
+  background-size: 22px;
+}
+</style>
+
+<script id="select_contact" type="text/x-underscore-template">
+	<%
+		for(var i = 0;i<arr.length;i++){
+			if(arr[i].uid == myId){
+				continue;
+			}
+	%>
+		<li data-id="<%=arr[i].uid%>" data-name="<%=arr[i].nickname%>">
+		    <span class='checkBox_select'></span>
+			<img src='../contact/image/head.jpg' class='contactImg'></img>
+			<span class='contactName'><%=arr[i].nickname%></span>
+		</li>
+	<%
+		}
+	%>
+	
+</script>
+
+<header class="bar bar-nav blue-bar">
+    <button class="btn btn-link btn-nav pull-left back" style="margin-left:-10px;">
+        <span class="icon icon-left-nav"></span>
+    </button>
+    <h1 class="title">选择联系人</h1>
+    <button class="btn btn-link btn-nav pull-right complete uncomplete">
+        <span>完成</span>
+    </button>
+</header>
+<div class="content">
+	<div class="scroller" style="padding-bottom: 44px">
+		<div class='select_test'>
+			<div class='index_contact '>
+				<div class='index_list'>
+					<div class='index_list_icon'></div>
+					<div class='index_list_title'>联系人</div>
+					<div class='index_list_acount'></div>
+				</div>
+				<div class='index_list_info' style="display:block;">
+					<ul class='contact_ul'>
+						
+					</ul>
+				<div>
+			</div>
+		</div>
+	</div>
+</div>
+</div>

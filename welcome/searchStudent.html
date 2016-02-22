@@ -1,0 +1,79 @@
+<div id="searchStudent" data-view="welcome/searchStudent">
+	<style>
+	#searchStudent *{
+		margin: 0;
+		padding:0;
+	}
+	#searchStudent .content{
+		padding-top: 44px;
+		padding-bottom: 50px;
+	}
+#searchStudent .inputcontainer{
+    padding: 10px 20px;
+    background: #fff;
+}
+#searchStudent .seacon{
+	border: solid #999 1px;
+	height: 32px;
+	border-radius: 18px;
+	padding: 6px 10px;
+}
+#searchStudent .seacon>div{
+	width: 20px;
+	height: 20px;
+		background: url("../welcome/img/magnifier.png") no-repeat center;
+		background-size: 100% auto;
+	display: inline-block;
+}
+#searchStudent input{
+	position: absolute;
+    margin: -3px 0 0 5px;
+	height: 25px;
+	border:none;
+	width: 70%;
+	font-size: 13px;
+}
+#searchStudent .major{
+	margin-top: 10px;
+}
+#searchStudent .major>img{
+	width: 40px;
+}
+#searchStudent .major>div{
+	display: inline-block;
+	position: absolute;
+	line-height: 40px;
+	margin-left: 10px;
+	font-size: 14px;
+	color: #333;
+}
+#searchStudent .ul{
+	margin-top: 10px;
+	background-color: #fff;
+}
+#searchStudent .ul>ul>li{
+	height: 55px;
+	line-height: 55px;
+	border-bottom: solid #ccc 1px;
+	padding-left: 20px;
+	font-size: 14px;
+	color: #444;
+}
+</style>
+	<header class="bar bar-nav blue-bar top-bar">
+		<button class="btn btn-link btn-nav pull-left back">
+			<span class="icon icon-nav"></span>
+		</button>
+		<h1 class="title">搜索学生</h1>
+		<button class="btn btn-link btn-nav pull-right edit" data-value="edit"></button>
+	</header>
+	<div class="content">
+		<div class="inputcontainer">
+			<div class="seacon">
+				<div></div><input placeholder="搜索学号或姓名"/>
+			</div>
+			<div class="major"><img src="../welcome/img/touxiang.png"/><div>计算机科学与技术</div></div>
+		</div>
+		<div class="ul"><ul><li>11103060101  张三</li><li>11103060102  张三</li><li>11103060103 张三</li><li>11103060104  张三</li><li>11103060105  张三</li><li>11103060106  张三</li><li>11103060107  张三</li><li>11103060108  张三</li></ul></div>
+	</div>
+</div>

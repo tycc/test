@@ -1,0 +1,367 @@
+<div id="index" data-view="contact/index">
+<style type="text/css">
+#index .content{
+	background-color: #f1f1f1;
+}
+#index .bar{
+	background-color: #30536d;
+}
+#index .index_list,#index .index_group_list{
+	height: 40px;
+	width: 100%;
+	line-height: 30px;
+	border-bottom: 1px solid #dadada;
+}
+#index .index_contact,.index_group{
+	background-color: #fff;
+}
+#index .index_list > div,#index .index_group_list > div{
+	float: left;
+	height: 100%;
+}
+#index .index_list_icon{
+	width: 31px;
+	background: url(../contact/image/arrow.png) no-repeat center;
+	-webkit-transform:rotate(-90deg);
+	margin-left: 5px;
+	background-size: 15px 8px;
+	margin-right: 5px;
+}
+#index .index_list_title{
+	color: #000;
+	line-height: 39px;
+	font-size: 16px;
+}
+#index .index_list .index_list_acount{
+	float: right;
+	margin-right: 5px;
+	font-size: 12px;
+	color: #999999;
+}
+#index .index_list_info{
+	width: 100%;
+}
+#index .index_list_info ul{
+	width: 100%;
+}
+#index .index_list_info ul li{
+	width: 100%;
+	height: 48px;
+	border-bottom: 1px solid #dadada;
+	background-color: #fff;
+}
+#index .index_list_info ul li > div{
+	float: left;
+	height: 100%;
+}
+#index .index_list_info ul li .index_list_info_img{
+	float: left;
+	margin-left: 10px;
+	overflow: hidden;
+}
+#index .index_list_info ul li .index_list_info_img img{
+	width: 34px;
+	height: 34px;
+	border-radius: 50%;
+	margin-top: 6px;
+}
+#index .index_list_info ul li .index_list_info_name{
+	margin-left: 8px;
+	width: 75%;
+}
+#index .index_list_info ul li .index_list_info_name > div:first-child{
+	height: 23px;
+	width: 100%;
+	line-height: 23px;
+	font-size: 16px;
+	color: #000;
+}
+#index .index_list_info ul li .index_list_info_name > div:last-child{
+	height: 17px;
+	width: 100%;
+	line-height: 17px;
+	font-size: 12px;
+	color: #999999;
+}
+
+
+
+#index .index_group_list_info{
+	width: 100%;
+}
+#index .index_group_list_info ul{
+	width: 100%;
+}
+#index .index_group_list_info ul li{
+	width: 100%;
+	height: 48px;
+	border-bottom: 1px solid #dadada;
+	background-color: #fff;
+}
+
+
+.index_nearContact ul li{
+	width: 100%;
+	height: 60px;
+	border-bottom: 1px solid #dadada;
+	position: relative;
+	background-color: #fff;
+}
+
+#index .index_nearContact_image{
+	float: left;
+	margin-left: 10px;
+	margin-right: 5px;
+	overflow: hidden;
+}
+#index .index_nearContact_image>img{
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	margin-top: 10px;
+}
+.index_nearContact_naw{
+	float: left;
+	width: 65%;
+	height: 100%;
+}
+.index_nearContact_naw .index_nearContact_name{
+	height: 30px;
+	width: 100%;
+	overflow: hidden;
+	color: #000;
+	line-height: 40px;
+}
+.index_nearContact_naw .index_nearContact_words{
+	height: 26px;
+	font-size: 14px;
+	width: 100%;
+	overflow: hidden;
+	color: #d8d8d8;
+	line-height: 26px;
+}
+.index_nearContact_date{
+	position: absolute;
+	font-size: 12px;
+	height: 30px;
+	line-height: 40px;
+	top: 0px;
+	right: 10px;
+	text-align: center;
+	color: #d8d8d8;
+}
+.index_nearContact_new{
+	position: absolute;
+	font-size: 12px;
+	width: 20px;
+	height: 20px;
+	line-height: 20px;
+	top: 31px;
+	right: 10px;
+	background-color: red;
+	border-radius: 50%;
+	text-align: center;
+	color: #fff;
+}
+
+/*遮罩层和菜单*/
+#index .index_shade{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: black;
+	opacity: 0.3;
+    display: block;
+    visibility: hidden;
+	z-index: 1001;
+    -webkit-transition: opacity 1s;
+    -moz-transition: opacity 1s;
+    transition: opacity 1s;
+    -webkit-transform: translateZ(0);
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+    -webkit-user-select: none;
+    -webkit-user-drag: none;
+}
+#index .index_menu{
+	z-index: 1002;
+	position: absolute;
+	display: block;
+    visibility: hidden;
+	top: 44px;
+	right: 5px;
+}
+#index .index_menu>div{
+	width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 10px;
+    border-color:  transparent transparent #ffffff transparent ;
+    right: 5px;
+    top: -10px;
+    position: absolute;
+    display: inline-block;
+}
+#index .index_menu>ul{
+	margin-top: 9px;
+	background-color: #ffffff;
+	border-radius: 5px;
+}
+#index .index_menu li{
+	height: 40px;
+	padding: 0 12px;
+	border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+#index .index_menu li>img{
+	width: 20px;
+	vertical-align: sub;
+}
+#index .index_menu li>span{
+	font-size: 15px;
+	line-height: 40px;
+}
+#index .myTitle span{
+	font-size: 16px;
+	color: #ddd;
+	margin-left: 2px;
+}
+#index .index_group .groupImg{
+	width: 34px;
+	height: 34px;
+	border-radius: 17px;
+	vertical-align: middle;
+	margin-left: 10px;
+}
+#index .index_group .groupName{
+	margin-left: 5px;
+	line-height: 47px;
+}
+#index .nameCoror{
+	color: #11D8A3 !important;
+}
+#index .online{
+	color: rgb(35,216,152) !important;
+}
+</style>
+
+<script id="index_contact" type="text/x-underscore-template">
+
+	<div class='index_contact'>
+		<div class='index_list hide'>
+			<div class='index_list_icon'></div>
+			<div class='index_list_title'>联系人</div>
+			<div class='index_list_acount'></div>
+		</div>
+		<div class='index_list_info' style="display:none;">
+			<ul>
+				<%
+					for(var i = 0;i<arr.length;i++){
+						if(arr[i].uid == myId){
+							continue;
+						}
+
+				%>
+					<li data-source='<%=arr[i].uid%>' data-id="<%=arr[i].uid%>" data-name="<%=arr[i].nickname%>">
+						<div class='index_list_info_img'>
+							<img src='../contact/image/head.jpg'></img>
+						</div>
+						<div class='index_list_info_name'>
+							<%if(i < 2){%>
+								<div class="online <%=arr[i].class%>"><%=arr[i].nickname%></div>
+								<div class="online">[在线]</div>
+							<%}else{%>
+								<div class="<%=arr[i].class%>"><%=arr[i].nickname%></div>
+								<div>[离线]</div>
+							<%}%>
+						</div>
+					</li>
+				<%
+					}
+				%>
+			</ul>
+		<div>
+	</div>
+</script>
+
+<script id="index_group" type="text/x-underscore-template">
+	<li>
+		<img src='../contact/image/head.jpg' class='groupImg'></img>
+		<span class='groupName'><%=name%></span>
+	</li>
+</script>
+
+<script id="index_nearContact_temp" type="text/x-underscore-template">
+	<li data-source='<%=source%>'  data-id="<%=source%>" data-name="<%=source%>">
+		<div class='index_nearContact_image'>
+			<img src='../contact/image/head.jpg'></img>
+		</div>
+		<div class='index_nearContact_naw'>
+			<div class='index_nearContact_name'><%=source%></div>
+			<div class='index_nearContact_words'><%=messageContent%></div>
+		</div>
+		<div class='index_nearContact_date'><%=time%></div>
+		<%
+		  if(unread > 0){
+		%>
+			<div class='index_nearContact_new'><%=unread%></div>
+		<%
+		  }
+		%>
+
+	</li>
+</script>
+
+<header class="bar bar-nav blue-bar">
+    <button class="btn btn-link btn-nav pull-left">
+        <!-- <img src='../contact/image/001.jpg'></img> -->
+    </button>
+    <h1 class="title myTitle" style='color:#fff;'><b>通讯录</b><span></span></h1>
+    <button class="btn btn-link btn-nav pull-right create">
+        <span style='background:url(../contact/image/guide.png) no-repeat center; width:34px; height:34px; background-size:70%;' class="icon"></span>
+    </button>
+</header>
+<div class="content">
+
+	<div id='index_test'></div>
+
+	<div class='index_group'>
+		<div class='index_group_list hide'>
+			<div class='index_list_icon'></div>
+			<div class='index_list_title'>群/组</div>
+		</div>
+		<div class='index_group_list_info' style="display:none;">
+			<ul class='clearfix'>
+
+			</ul>
+		</div>
+	</div>
+
+	<div style='height:40px; width:100%; background-color:#f1f1f1; text-indent:5px; line-height:40px;border-bottom:1px solid #dadada; font-size:16px;'>最近联系人</div>
+
+	<div class='index_nearContact'>
+		<ul class='recent_contact'>
+		</ul>
+	</div>
+
+	<div class='index_shade'></div>
+	<div class='index_menu'>
+		<div></div>
+		<ul>
+			<li data-value='createGroup'>
+				<img src="../contact/image/add_group.png"></img>
+				<span>创建群</span>
+			</li>
+			<li data-value='createDiscussion'>
+				<img src="../contact/image/add_discussion.png"></img>
+				<span>创建讨论组</span>
+			</li>
+			<!-- <li data-value='logout'>
+				<img src="../contact/image/add_discussion.png"></img>
+				<span>注销</span>
+			</li> -->
+		</ul>
+	</div>
+
+</div>
+</div>

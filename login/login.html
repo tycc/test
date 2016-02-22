@@ -1,0 +1,189 @@
+<div id="login" data-view="login/login">
+    <style type="text/css">
+    html {
+        position: relative;
+        width: 100%;
+        height: 100%;
+    }
+
+    body {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        bottom: 0px;
+        width: 100%;
+    }
+
+
+    #login .blue-bar {
+        background-color: #30536d;
+        height: 44px;
+        box-shadow: 0px 3px 8px 0px rgba(0, 0, 0, 0.1);
+    }
+
+    #login .bar .icon {
+        width: 44px;
+        height: 44px;
+    }
+
+    #login .title {
+        height: 100%;
+        line-height: 44px;
+    }
+
+    #login .blue-bar .btn-link {
+        color: #fff;
+    }
+
+    #login .blue-bar h1 {
+        color: #fff;
+        font-size: 18px;
+    }
+
+    #login #login-index .content::-webkit-scrollbar {
+        display: none;
+    }
+
+    #login .logo {
+        margin-top: 55px;
+        height: 120px;
+    }
+
+    #login .login-form {
+        margin-top: 58px;
+    }
+
+    #login #login-area {
+        margin-top: 25px;
+        margin-bottom: 20px;
+        border: none;
+        border-radius: 0;
+    }
+
+    #login #login-area #login-button {
+            padding: 12px 0;
+    font-size: 20px;
+    background: #60BDFA;
+    border: none;
+    border-radius: 20px;
+    color: #fff;
+    }
+
+    #login #login-area .spin {
+        height: 60px;
+        background: #60BDFA;
+        border: 0px;
+        display: none;
+        border-radius: 5px;
+    }
+
+    #login #login-area.loading #login-button {
+        padding: 20px 0;
+        font-size: 20px;
+        background: #359af6;
+        border: 0px;
+        display: none;
+        color: #fff;
+    }
+
+    #login #login-area.loading .spin {
+        display: block;
+    }
+
+    #login .input-group {
+        background: none;
+    }
+
+    #loginm .input-row {
+        margin-bottom: 15px;
+        height: inherit;
+        background-image: none;
+        background: #fff;
+        border-radius: 8px;
+        border: 1px solid #A0A0A0;
+        padding: 2px;
+    }
+
+    #login .input-row input {
+        float: none;
+        display: block;
+        min-width: 170px;
+            padding-top: 12px;
+    font-size: 14px;
+    }
+
+    #login .input-row label {
+        display: block;
+        width: 22px;
+        height: 22px;
+        margin: 10px 0 0 10px;
+        padding: 0;
+        float: none;
+    }
+
+    #login .input-row div {
+        border-left: 1px solid #e6e6e6;
+        float: none;
+        width: 50px;
+        display: block;
+        text-align: center;
+    }
+
+    #login .muser label {
+        background: url(../login/img/member_icon.ing) no-repeat;
+        background-size: contain;
+    }
+
+    #login .pwd label {
+        background: url(../login/img/pwd_icon.ing) no-repeat;
+        background-size: contain;
+    }
+    #login .hbox{
+            background-image: none;
+    border: 1px solid #999;
+    border-radius: 18px;
+    margin-top: 10px;
+    }
+    #login .input-row {
+    height: 44px;
+}
+#login .icon{
+        width: 17px !important;
+        height: 17px !important;
+        margin-right: 2px;
+        margin-left: 10px;
+        background: url(../welcome/img/back.png);
+        background-size: 100% 100%;
+    }
+    </style>
+    </head>
+    <header class="bar bar-nav blue-bar top-bar">
+        <button class="btn btn-link btn-nav pull-left back">
+            <span class="icon icon-nav"></span>返回
+        </button>
+        <h1 class="title">登陆</h1>
+        <button class="btn btn-link btn-nav pull-right edit" data-value="edit">
+        </button>
+    </header>
+    <div id="login-index" style="height:100%">
+        <div class="content" style="background-color:#FFFFFF;padding:10px 30px;position:relative;height:100%;">
+            <div style="text-align:center">
+                <img src="../login/img/head.jpg" class="logo" />
+            </div>
+            <form class="input-group login-form">
+                <div class="input-row muser hbox">
+                    <label></label>
+                    <input id="username" type="text" placeholder="输入用户名" class="flex1">
+                </div>
+                <div class="input-row pwd hbox">
+                    <label></label>
+                    <input id="password" type="password" placeholder="输入密码" class="flex1">
+                </div>
+            </form>
+            <div id="login-area">
+                <button id="login-button" class="btn btn-block btn-primary">登 录</button>
+                <div id="spin-area" class="spin btn btn-block btn-primary"></div>
+            </div>
+        </div>
+    </div>
+</div>

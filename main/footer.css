@@ -1,0 +1,202 @@
+
+#main-footer {
+	position: fixed;
+	bottom: 0px;
+	width: 100%;
+	z-index: 100;
+}
+#main-footer .footerContent {
+	background-color: #30536d;
+	height: 51px;
+	color: #5f7188;
+}
+#main-footer .footerContent .icon{
+	font-size: 18px;
+}
+#main-footer .footerContent .tab-item > div{
+	font-size: 12px;
+}
+#main-footer .table-view-cell{
+	background-image: none !important;
+    border-bottom: 1px solid #ccc !important;
+    padding: 11px 15px 11px 15px;
+}
+#main-footer #popover .triangle{
+	position: absolute;
+	border-style: solid;
+	border-width: 15px 15px 0px 15px;
+	border-color: #e0e0e0 transparent transparent transparent;
+	width: 15px;
+	bottom: -15px;
+	right: 30px;
+}
+@media (max-width: 399px){
+	#main-footer .eseIconDiv{
+		padding-top: 23px;
+		padding-bottom: 23px;
+	}
+	#main-footer .footerContent{
+		height: 51px;
+	}
+	#main-footer .footerContent .tab-item > div{
+		font-size: 12px;
+	}
+	#main-footer .icon-carlocation {
+		background: url("../main/imgs/home.png");
+		background-size:20px;
+		background-repeat:no-repeat;
+		background-position:50% 50%;
+		height: 20px;
+		margin-bottom: 5px;
+	}
+	#main-footer .icon-orderform {
+		background: url("../main/imgs/yingxin.png");
+		background-size:20px;
+		background-repeat:no-repeat;
+		background-position:50% 50%;
+		height: 20px;
+		margin-bottom: 5px;
+	}
+	#main-footer .icon-advisory {
+		background: url("../main/imgs/tongxunlu.png");
+		background-size:20px;
+		background-repeat:no-repeat;
+		background-position:50% 50%;
+		height: 20px;
+		margin-bottom: 5px;
+	}
+	#main-footer .icon-account {
+		background: url("../main/imgs/me.png");
+		background-size:20px;
+		background-repeat:no-repeat;
+		background-position:50% 50%;
+		height: 20px;
+		margin-bottom: 5px;
+	}
+
+
+		#main-footer #popover {
+		/*right:-webkit-calc(16.67% - 42px);*/
+		bottom: 52px;
+	}
+
+} 
+ @media (min-width:400px) and (max-width: 539px){
+	#main-footer .footerContent{
+		height: 56px;
+	}
+
+	#main-footer .footerContent .tab-item > div{
+		font-size: 14px;
+	}
+
+#main-footer .icon-carlocation {
+		background: url("../main/imgs/home.png");
+		background-size:24px;
+		background-repeat:no-repeat;
+		background-position:50% 50%;
+		height: 24px;
+		margin-bottom: 5px;
+	}
+	#main-footer .icon-orderform {
+		background: url("../main/imgs/yingxin.png");
+		background-size:24px;
+		background-repeat:no-repeat;
+		background-position:50% 50%;
+		height: 24px;
+		margin-bottom: 5px;
+	}
+	#main-footer .icon-advisory {
+		background: url("../main/imgs/tongxunlu.png");
+		background-size:24px;
+		background-repeat:no-repeat;
+		background-position:50% 50%;
+		height: 24px;
+		margin-bottom: 5px;
+	}
+	#main-footer .icon-account {
+		background: url("../main/imgs/me.png");
+		background-size:24px;
+		background-repeat:no-repeat;
+		background-position:50% 50%;
+		height: 24px;
+		margin-bottom: 5px;
+	}
+
+	
+
+
+
+	#main-footer #popover {
+		/*right:-webkit-calc(16.67% - 44px);*/
+		bottom: 57px;
+	}
+}
+ @media (min-width: 540px){
+	#main-footer .footerContent{
+		height: 70px;
+	}
+	#main-footer .footerContent .tab-item > div{
+		font-size: 22px;
+	}
+#main-footer .icon-carlocation {
+		background: url("../main/imgs/home.png");
+			background-size:28px;
+		background-repeat:no-repeat;
+		background-position:50% 50%;
+		height: 28px;
+		margin-bottom: 5px;
+	}
+	#main-footer .icon-orderform {
+		background: url("../main/imgs/yingxin.png");
+			background-size:28px;
+		background-repeat:no-repeat;
+		background-position:50% 50%;
+		height: 28px;
+		margin-bottom: 5px;
+	}
+	#main-footer .icon-advisory {
+		background: url("../main/imgs/tongxunlu.png");
+			background-size:28px;
+		background-repeat:no-repeat;
+		background-position:50% 50%;
+		height: 28px;
+		margin-bottom: 5px;
+	}
+	#main-footer .icon-account {
+		background: url("../main/imgs/me.png");
+			background-size:28px;
+		background-repeat:no-repeat;
+		background-position:50% 50%;
+		height: 28px;
+		margin-bottom: 5px;
+	}
+
+	
+	#main-footer #popover {
+		/*right:-webkit-calc(16.67% - 46px);*/
+		bottom: 71px;
+	}
+	
+}
+.uilocation .footerActive{
+		background-image: url("../main/imgs/home_1.png")!important;
+}
+.uiorderform .footerActive{
+		background-image: url("../main/imgs/yingxin_1.png")!important;
+}
+.uiadvisory .footerActive{
+		background-image: url("../main/imgs/tongxunlu_1.png")!important;
+}
+.uiaccount .footerActive{
+		background-image: url("../main/imgs/me_1.png")!important;
+}
+.footerMasker{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	visibility: visible;
+	z-index: 99;
+}
